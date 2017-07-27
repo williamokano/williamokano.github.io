@@ -3,6 +3,22 @@
     <head>
         <title>William Okano - Dev</title>
     </head>
+    <style type="text/css">
+    blink {
+        animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    }
+    @keyframes blink-animation {
+        to {
+            visibility: hidden;
+        }
+    }
+    @-webkit-keyframes blink-animation {
+        to {
+            visibility: hidden;
+        }
+    }
+    </style>
     <body>
         <h1>William Okano</h1>
         <div>Dev</div>
