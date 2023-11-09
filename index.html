@@ -32,12 +32,12 @@
 
     <script src="cheerleader.min.js"></script>
     <script>
-        // cheerYourTitle.create('Eu sou o William Okano - Dev').slide(150, 12);
-        // var cheerleader = cheerYourTitle.create('Eu sou dev de webmaister').blink(1);
+        const initialTitle = cheerYourTitle.create('Eu sou dev de webmaister').blink(500);
 
-        // setTimeout(function () {
-        //     cheerleader.stop();
-        // }, 3000);
+        setTimeout(function () {
+            initialTitle.stop();
+            cheerYourTitle.create('Eu sou o William Okano - Dev').slide(100, 22);
+        }, 3000);
     </script>
 </body>
 
