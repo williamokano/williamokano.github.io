@@ -6,8 +6,8 @@
 </head>
 <style type="text/css">
     blink {
-        animation: blink-animation 1s steps(5, start) infinite;
-        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+        animation: blink-animation 1s steps(2, start) infinite;
+        -webkit-animation: blink-animation 1s steps(2, start) infinite;
     }
 
     @keyframes blink-animation {
@@ -32,13 +32,12 @@
 
     <script src="cheerleader.min.js"></script>
     <script>
-        cheerYourTitle.create('Eu sou o William Okano - Dev').slide(150, 12);
-        var cheerleader = cheerYourTitle.create('Eu sou dev de webmaister').blink(1);
+        // cheerYourTitle.create('Eu sou o William Okano - Dev').slide(150, 12);
+        // var cheerleader = cheerYourTitle.create('Eu sou dev de webmaister').blink(1);
 
-        setTimeout(function () {
-            // blink for 5 secs then stop
-            cheerleader.stop();
-        }, 3000);
+        // setTimeout(function () {
+        //     cheerleader.stop();
+        // }, 3000);
     </script>
 </body>
 
