@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contagem Regressiva</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      background: linear-gradient(135deg, #ffdee9, #b5fffc);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #333;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .countdown {
+      font-size: 32px;
+      font-weight: bold;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="message">Carregando...</h1>
+    <div class="countdown" id="countdown">00d 00h 00m 00s</div>
+  </div>
+
+  <script>
+    // DATA ALVO (ano, mês - 1, dia, hora, minuto, segundo)
+    const targetDate = new Date(2025, 5, 20, 15, 0, 0); // 20 de junho de 2025 às 15:00
+
+    const messageEl = document.getElementById("message");
+    const countdownEl = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        messageEl.textContent = `Glória ainda não chegou! Faltam:`;
+      } else {
+        countdownEl.textContent = "";
+        messageEl.textContent = `Meu amor está em Berlim`;
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
