@@ -26,6 +26,7 @@
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      cursor: pointer;
     }
 
     h1 {
@@ -37,21 +38,32 @@
       font-size: 32px;
       font-weight: bold;
       color: #222;
+      user-select: none;
+    }
+
+    .copied {
+      font-size: 14px;
+      color: green;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" onclick="copyCountdown()">
     <h1 id="message">Carregando...</h1>
     <div class="countdown" id="countdown">00d 00h 00m 00s</div>
+    <div class="copied" id="copied" style="display: none;">Copiado!</div>
   </div>
 
   <script>
-    // DATA ALVO (ano, mês - 1, dia, hora, minuto, segundo)
-    const targetDate = new Date(2025, 4, 29, 20, 55, 0); // 29 de Maio de 2025 às 20:55
-
+    const targetDate = new Date(2025, 4, 29, 20, 55, 0); // 29 de maio de 2025, 20:55
     const messageEl = document.getElementById("message");
     const countdownEl = document.getElementById("countdown");
+    const copiedEl = document.getElementById("copied");
+
+    function pad(num) {
+      return String(num).padStart(2, '0');
+    }
 
     function updateCountdown() {
       const now = new Date();
@@ -63,12 +75,22 @@
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
 
-        countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        countdownEl.textContent = `${days}d ${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
         messageEl.textContent = `Glória ainda não chegou! Faltam:`;
       } else {
         countdownEl.textContent = "";
         messageEl.textContent = `Meu amor está em Berlim`;
       }
+    }
+
+    function copyCountdown() {
+      const text = countdownEl.textContent;
+      if (!text) return;
+
+      navigator.clipboard.writeText(text).then(() => {
+        copiedEl.style.display = "block";
+        setTimeout(() => copiedEl.style.display = "none", 1500);
+      });
     }
 
     updateCountdown();
