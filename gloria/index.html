@@ -69,24 +69,36 @@
     const countdownEl = document.getElementById("countdown");
     const copiedEl = document.getElementById("copied");
   
-    function pad(num) {
-      return String(num).padStart(2, '0');
-    }
-  
     function updateCountdown() {
-      // Agora local do usuário convertido para UTC
       const now = new Date();
       const nowUTC = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
-  
+    
       const diff = targetDate - nowUTC;
-  
+    
       if (diff > 0) {
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
-  
-        countdownEl.textContent = `${days}d ${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
+    
+        const parts = [];
+    
+        if (days > 0) parts.push(`${days} ${days === 1 ? 'dia' : 'dias'}`);
+        if (hours > 0) parts.push(`${hours} ${hours === 1 ? 'hora' : 'horas'}`);
+        if (minutes > 0) parts.push(`${minutes} ${minutes === 1 ? 'minuto' : 'minutos'}`);
+        if (seconds >= 0) parts.push(`${seconds} ${seconds === 1 ? 'segundo' : 'segundos'}`);
+    
+        // Junta com vírgulas e "e" antes do último item
+        let formatted = '';
+        if (parts.length === 1) {
+          formatted = parts[0];
+        } else if (parts.length === 2) {
+          formatted = parts.join(' e ');
+        } else {
+          formatted = parts.slice(0, -1).join(', ') + ' e ' + parts.slice(-1);
+        }
+    
+        countdownEl.textContent = formatted;
         messageEl.textContent = `Glória ainda não chegou! Faltam:`;
       } else {
         countdownEl.textContent = "";
