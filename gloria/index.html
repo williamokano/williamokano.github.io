@@ -56,25 +56,36 @@
   </div>
 
   <script>
-    const targetDate = new Date(2025, 4, 29, 20, 55, 0); // 29 de maio de 2025, 20:55
+    // 1. Define a data como sendo 29/05/2025 20:55 no fuso de Berlim
+    const berlinTimeZone = 'Europe/Berlin';
+    const berlinDateString = '2025-05-29T20:55:00';
+  
+    // Converte a data em Berlim para UTC
+    const targetDate = new Date(
+      new Date(berlinDateString + '+02:00').toUTCString()
+    );
+  
     const messageEl = document.getElementById("message");
     const countdownEl = document.getElementById("countdown");
     const copiedEl = document.getElementById("copied");
-
+  
     function pad(num) {
       return String(num).padStart(2, '0');
     }
-
+  
     function updateCountdown() {
+      // Agora local do usuário convertido para UTC
       const now = new Date();
-      const diff = targetDate - now;
-
+      const nowUTC = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
+  
+      const diff = targetDate - nowUTC;
+  
       if (diff > 0) {
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
-
+  
         countdownEl.textContent = `${days}d ${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
         messageEl.textContent = `Glória ainda não chegou! Faltam:`;
       } else {
@@ -82,17 +93,17 @@
         messageEl.textContent = `Meu amor está em Berlim`;
       }
     }
-
+  
     function copyCountdown() {
       const text = countdownEl.textContent;
       if (!text) return;
-
+  
       navigator.clipboard.writeText(text).then(() => {
         copiedEl.style.display = "block";
         setTimeout(() => copiedEl.style.display = "none", 1500);
       });
     }
-
+  
     updateCountdown();
     setInterval(updateCountdown, 1000);
   </script>
