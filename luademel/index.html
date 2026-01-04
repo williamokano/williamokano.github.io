@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contagem Regressiva</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body,
+      html {
+        height: 100%;
+        background: linear-gradient(135deg, #ffdee9, #b5fffc);
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #333;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .countdown {
+        font-size: 32px;
+        font-weight: bold;
+        color: #222;
+        user-select: none;
+      }
+
+      .copied {
+        font-size: 14px;
+        color: green;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" onclick="copyCountdown()">
+      <h1 id="message">Carregando...</h1>
+      <div class="countdown" id="countdown">00d 00h 00m 00s</div>
+      <div class="copied" id="copied" style="display: none">Copiado!</div>
+    </div>
+
+    <script>
+      const targetDate = new Date("2026-05-05T10:00:00+01:00");
+
+      const messageEl = document.getElementById("message");
+      const countdownEl = document.getElementById("countdown");
+      const copiedEl = document.getElementById("copied");
+
+      function updateCountdown() {
+        const now = new Date();
+
+        const diff = targetDate - now;
+
+        if (diff > 0) {
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+          const minutes = Math.floor((diff / (1000 * 60)) % 60);
+          const seconds = Math.floor((diff / 1000) % 60);
+
+          const parts = [];
+
+          if (days > 0) parts.push(`${days} ${days === 1 ? "dia" : "dias"}`);
+          if (hours > 0)
+            parts.push(`${hours} ${hours === 1 ? "hora" : "horas"}`);
+          if (minutes > 0)
+            parts.push(`${minutes} ${minutes === 1 ? "minuto" : "minutos"}`);
+          if (seconds >= 0)
+            parts.push(`${seconds} ${seconds === 1 ? "segundo" : "segundos"}`);
+
+          // Junta com vírgulas e "e" antes do último item
+          let formatted = "";
+          if (parts.length === 1) {
+            formatted = parts[0];
+          } else if (parts.length === 2) {
+            formatted = parts.join(" e ");
+          } else {
+            formatted = parts.slice(0, -1).join(", ") + " e " + parts.slice(-1);
+          }
+
+          countdownEl.textContent = formatted;
+          messageEl.textContent = `Nosso religioso está chegando! Ainda não estamos casados. Save the date!`;
+        } else {
+          countdownEl.textContent = "";
+          messageEl.textContent = `Estamos absolutamente unidos, perante a Deus, nossa família e o governo. Agora indo pra lua de mel!`;
+        }
+      }
+
+      function copyCountdown() {
+        const text = countdownEl.textContent;
+        if (!text) return;
+
+        navigator.clipboard.writeText(text).then(() => {
+          copiedEl.style.display = "block";
+          setTimeout(() => (copiedEl.style.display = "none"), 1500);
+        });
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
