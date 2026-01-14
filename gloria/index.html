@@ -19,6 +19,9 @@
       justify-content: center;
       text-align: center;
       color: #333;
+      -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10+ */
+      user-select: none; /* Standard syntax */
     }
 
     .container {
@@ -173,6 +176,10 @@
     });
 
     document.addEventListener('drop', function(e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener('contextmenu', function(e) {
       e.preventDefault();
     });
   </script>
