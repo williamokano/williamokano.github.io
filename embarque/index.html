@@ -70,13 +70,16 @@
         const diff = targetDate - now;
 
         if (diff > 0) {
-          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const months = Math.floor(days / 30);
+          days %= 30;
           const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
           const minutes = Math.floor((diff / (1000 * 60)) % 60);
           const seconds = Math.floor((diff / 1000) % 60);
 
           const parts = [];
 
+          if (months > 0) parts.push(`${months} ${months === 1 ? 'mês' : 'meses'}`);
           if (days > 0) parts.push(`${days} ${days === 1 ? "dia" : "dias"}`);
           if (hours > 0)
             parts.push(`${hours} ${hours === 1 ? "hora" : "horas"}`);
