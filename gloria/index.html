@@ -134,12 +134,12 @@
     setInterval(updateCountdown, 1000);
   </script>
   <script>
-    document.addEventListener('mousemove', function(e) {
+    function createSparkle(x, y) {
       let body = document.querySelector('body');
       let element = document.createElement('span');
       element.className = 'cursor-element';
-      element.style.left = e.pageX + 'px';
-      element.style.top = e.pageY + 'px';
+      element.style.left = x + 'px';
+      element.style.top = y + 'px';
       
       const icons = ['✨', '❤'];
       const icon = icons[Math.floor(Math.random() * icons.length)];
@@ -156,6 +156,16 @@
       setTimeout(() => {
         element.remove();
       }, 1000);
+    }
+
+    document.addEventListener('mousemove', function(e) {
+      createSparkle(e.pageX, e.pageY);
+    });
+
+    document.addEventListener('touchmove', function(e) {
+      if (e.touches.length > 0) {
+        createSparkle(e.touches[0].pageX, e.touches[0].pageY);
+      }
     });
   </script>
 </body>
