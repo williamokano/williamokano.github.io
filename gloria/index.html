@@ -167,6 +167,14 @@
         createSparkle(e.touches[0].pageX, e.touches[0].pageY);
       }
     });
+
+    document.addEventListener('dragstart', function(e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener('drop', function(e) {
+      e.preventDefault();
+    });
   </script>
 </body>
 </html>
