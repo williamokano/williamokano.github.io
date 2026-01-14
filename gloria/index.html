@@ -46,6 +46,25 @@
       color: green;
       margin-top: 10px;
     }
+
+    .cursor-element {
+      position: absolute;
+      pointer-events: none;
+      animation: fadeOut 1s linear forwards;
+      font-size: 24px;
+      z-index: 9999;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(20px) rotate(360deg);
+      }
+    }
   </style>
 </head>
 <body>
@@ -113,6 +132,31 @@
   
     updateCountdown();
     setInterval(updateCountdown, 1000);
+  </script>
+  <script>
+    document.addEventListener('mousemove', function(e) {
+      let body = document.querySelector('body');
+      let element = document.createElement('span');
+      element.className = 'cursor-element';
+      element.style.left = e.pageX + 'px';
+      element.style.top = e.pageY + 'px';
+      
+      const icons = ['✨', '❤'];
+      const icon = icons[Math.floor(Math.random() * icons.length)];
+      element.textContent = icon;
+      
+      if (icon === '❤') {
+        element.style.color = 'red';
+      }
+      
+      element.style.fontSize = (Math.random() * 16 + 16) + 'px'; // from 16px to 32px
+
+      body.appendChild(element);
+
+      setTimeout(() => {
+        element.remove();
+      }, 1000);
+    });
   </script>
 </body>
 </html>
