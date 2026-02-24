@@ -1,44 +1,530 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Eu sou o William Okano - Dev</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta -->
+  <title>William Okano — Staff Software Engineer</title>
+  <meta name="description" content="Staff-level software engineer based in Berlin with 15+ years of experience building reliable backend systems across fintech, logistics, and AI/productivity.">
+  <meta name="author" content="William Okano">
+  <link rel="canonical" href="https://williamokano.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://williamokano.github.io/">
+  <meta property="og:title" content="William Okano — Staff Software Engineer">
+  <meta property="og:description" content="Staff-level software engineer based in Berlin. 15+ years building reliable backend systems across fintech, logistics, and AI/productivity.">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="William Okano — Staff Software Engineer">
+  <meta name="twitter:description" content="Staff-level software engineer based in Berlin. 15+ years building reliable backend systems.">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "William Okano",
+    "url": "https://williamokano.github.io",
+    "jobTitle": "Staff Software Engineer",
+    "worksFor": { "@type": "Organization", "name": "Grammarly" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidade Federal de Uberlândia" },
+    "sameAs": [
+      "https://github.com/williamokano",
+      "https://linkedin.com/in/williamokano",
+      "https://medium.com/@williamokano",
+      "https://instagram.com/okano_william"
+    ]
+  }
+  </script>
 </head>
-<style type="text/css">
-    blink {
-        animation: blink-animation 1s steps(2, start) infinite;
-        -webkit-animation: blink-animation 1s steps(2, start) infinite;
-    }
 
-    @keyframes blink-animation {
-        to {
-            visibility: hidden;
-        }
-    }
-
-    @-webkit-keyframes blink-animation {
-        to {
-            visibility: hidden;
-        }
-    }
-</style>
-<!-- This is obviously a joke, this site is by no means showing my code skills, it's just fun -->
 <body>
-    <h1>William Okano</h1>
-    <div>Dev</div>
-    <marquee>Berlin, Germany</marquee>
-    <blink>From: Cravinhos, São Paulo, Brasil</blink></br></br>
-    <b>Bem vindo ao meu maravilhoso sait, muitas tecnologia de muintão.</b>
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <script src="cheerleader.min.js"></script>
-    <script>
-        const initialTitle = cheerYourTitle.create('Eu sou dev de webmaister').blink(500);
+  <!-- ========== Navigation ========== -->
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo" aria-label="Home">w<span>.</span>okano</a>
 
-        setTimeout(function () {
-            initialTitle.stop();
-            cheerYourTitle.create('Eu sou o William Okano - Dev').slide(100, 22);
-        }, 3000);
-    </script>
+      <!-- Desktop Nav -->
+      <div class="nav-links">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#writing" data-i18n="nav.writing">Writing</a>
+        <a href="#beyond" data-i18n="nav.beyond">Beyond</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+
+      <!-- Nav Actions (always visible) -->
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle color theme">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="nav-mobile" aria-label="Mobile navigation">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#writing" data-i18n="nav.writing">Writing</a>
+        <a href="#beyond" data-i18n="nav.beyond">Beyond</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== Main Content ========== -->
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <p class="hero-greeting reveal" data-i18n="hero.greeting">// Hi, I'm</p>
+        <h1 class="hero-title reveal reveal-delay-1">
+          <span class="gradient-text">William Okano</span>
+        </h1>
+        <p class="hero-subtitle reveal reveal-delay-2" data-i18n="hero.subtitle">I build reliable backend systems and help engineering teams ship with confidence. Fifteen years in, I still believe the best code is the code that's easy for the next person to read.</p>
+        <div class="hero-cta reveal reveal-delay-3">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_projects">View Projects</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="hero.cta_contact">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="about.title">About</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text reveal">
+            <p data-i18n="about.p1">I grew up in Brazil, studied Computer Science at Universidade Federal de Uberlândia, and started writing code professionally before I could legally rent a car. That was over fifteen years ago. Since then, I have worked across fintech, food delivery, and productivity tooling — building systems that serve millions of users and mentoring the engineers who maintain them.</p>
+            <p data-i18n="about.p2">My path took me from Brazil to Berlin, where I have spent the last several years working at companies like N26 Bank, Delivery Hero, and Grammarly. At each stop, the pattern has been the same: I dig into the hard backend problems, push for clean and maintainable solutions, and make sure the people around me have what they need to do their best work.</p>
+            <p data-i18n="about.p3">I am a backend engineer at heart — Go, Kotlin, JVM, distributed systems — but I am comfortable moving across the stack when the problem calls for it. What matters to me is not the language or the framework. It is whether we are building something that works well, reads well, and will still make sense six months from now when someone else opens the pull request.</p>
+          </div>
+          <div class="about-image reveal">
+            <img
+              src="https://avatars.githubusercontent.com/u/5909442?v=4"
+              alt="William Okano"
+              width="220"
+              height="220"
+              loading="eager"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="skills.title">Skills & Technologies</h2>
+          <p class="section-subtitle" data-i18n="skills.subtitle">Tools I reach for when building reliable systems</p>
+        </div>
+        <div class="skills-grid stagger">
+          <div class="skill-card glass-card reveal">
+            <div class="skill-card-icon">&#60;/&#62;</div>
+            <h3 class="skill-card-title" data-i18n="skills.languages">Languages</h3>
+            <div class="skill-card-list">
+              <span class="tag">Go</span>
+              <span class="tag">Kotlin</span>
+              <span class="tag">Java</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Python</span>
+              <span class="tag">PHP</span>
+            </div>
+          </div>
+          <div class="skill-card glass-card reveal">
+            <div class="skill-card-icon">&#9881;</div>
+            <h3 class="skill-card-title" data-i18n="skills.backend">Backend & Systems</h3>
+            <div class="skill-card-list">
+              <span class="tag">REST APIs</span>
+              <span class="tag">WebSockets</span>
+              <span class="tag">Microservices</span>
+              <span class="tag">Event-Driven</span>
+              <span class="tag">Databases</span>
+            </div>
+          </div>
+          <div class="skill-card glass-card reveal">
+            <div class="skill-card-icon">&#9729;</div>
+            <h3 class="skill-card-title" data-i18n="skills.infra">Infrastructure & DevOps</h3>
+            <div class="skill-card-list">
+              <span class="tag">Terraform</span>
+              <span class="tag">Docker</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">Chaos Engineering</span>
+              <span class="tag">Cloud</span>
+            </div>
+          </div>
+          <div class="skill-card glass-card reveal">
+            <div class="skill-card-icon">&#9830;</div>
+            <h3 class="skill-card-title" data-i18n="skills.web3">Web3 & Blockchain</h3>
+            <div class="skill-card-list">
+              <span class="tag">Solidity</span>
+              <span class="tag">Smart Contracts</span>
+              <span class="tag">Ethereum</span>
+              <span class="tag">ethers.js</span>
+            </div>
+          </div>
+          <div class="skill-card glass-card reveal">
+            <div class="skill-card-icon">&#9874;</div>
+            <h3 class="skill-card-title" data-i18n="skills.tooling">Tooling & Environment</h3>
+            <div class="skill-card-list">
+              <span class="tag">Git</span>
+              <span class="tag">Neovim</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Shell Scripting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="projects.title">Featured Projects</h2>
+          <p class="section-subtitle"><span data-i18n="projects.subtitle_prefix">A selection from</span> <a href="https://github.com/williamokano" target="_blank" rel="noopener" style="color: var(--accent);" data-i18n="projects.subtitle_link">81 public repositories</a></p>
+        </div>
+        <div class="projects-grid stagger">
+          <div class="project-card glass-card reveal">
+            <h3 class="project-card-header" data-i18n="projects.terraform_title">Terraform Provider for Litmus Chaos</h3>
+            <p class="project-card-description" data-i18n="projects.terraform_desc">A custom Terraform provider that brings chaos engineering experiments into the infrastructure-as-code workflow. Enables teams to define, version, and automate chaos experiments alongside their infrastructure.</p>
+            <div class="project-card-tags">
+              <span class="tag">Go</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">Chaos Engineering</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://github.com/williamokano/terraform-provider-litmus-chaos" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span data-i18n="projects.source_code">Source Code</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card glass-card reveal">
+            <h3 class="project-card-header" data-i18n="projects.lox_title">Lox Language Interpreter</h3>
+            <p class="project-card-description" data-i18n="projects.lox_desc">A from-scratch implementation of the Lox programming language following Robert Nystrom's Crafting Interpreters. Covers lexical analysis, parsing, AST evaluation, and runtime execution.</p>
+            <div class="project-card-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Interpreters</span>
+              <span class="tag">Language Design</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://github.com/williamokano/lox-java-interpreter" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span data-i18n="projects.source_code">Source Code</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card glass-card reveal">
+            <h3 class="project-card-header" data-i18n="projects.websocket_title">Real-Time WebSocket Chat</h3>
+            <p class="project-card-description" data-i18n="projects.websocket_desc">A concurrent chat system featuring both a terminal-based UI and a web client, connected through WebSocket communication. Demonstrates real-time bidirectional messaging and connection management.</p>
+            <div class="project-card-tags">
+              <span class="tag">Go</span>
+              <span class="tag">WebSockets</span>
+              <span class="tag">TUI</span>
+              <span class="tag">Concurrency</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://github.com/williamokano/go-websocket-chat" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span data-i18n="projects.source_code">Source Code</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card glass-card reveal">
+            <h3 class="project-card-header" data-i18n="projects.smartcontract_title">Smart Contract Development & Testing</h3>
+            <p class="project-card-description" data-i18n="projects.smartcontract_desc">A development environment for writing, deploying, and testing Solidity smart contracts on Ethereum. Includes a full test suite built with Mocha and Chai, applying backend engineering rigor to blockchain development.</p>
+            <div class="project-card-tags">
+              <span class="tag">Solidity</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Ethereum</span>
+              <span class="tag">Mocha</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://github.com/williamokano/smart-contract-dev-and-testing" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span data-i18n="projects.source_code">Source Code</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card glass-card reveal">
+            <h3 class="project-card-header" data-i18n="projects.pgbackup_title">PostgreSQL Backup Utility</h3>
+            <p class="project-card-description" data-i18n="projects.pgbackup_desc">A lightweight, containerized tool for automating PostgreSQL database backups. Designed with operational simplicity — package it with Docker, point it at a database, and let it handle the rest.</p>
+            <div class="project-card-tags">
+              <span class="tag">Go</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://github.com/williamokano/pg_backuper" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span data-i18n="projects.source_code">Source Code</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card glass-card reveal">
+            <h3 class="project-card-header" data-i18n="projects.hashicorp_title">HashiCorp Plugin Architecture</h3>
+            <p class="project-card-description" data-i18n="projects.hashicorp_desc">A reference implementation of HashiCorp's go-plugin architecture, demonstrating how to build extensible systems using process-separated plugins communicating over RPC.</p>
+            <div class="project-card-tags">
+              <span class="tag">Go</span>
+              <span class="tag">HashiCorp</span>
+              <span class="tag">Plugin Systems</span>
+              <span class="tag">RPC</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://github.com/williamokano/hashicorp-plugin-example" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span data-i18n="projects.source_code">Source Code</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="experience.title">Experience</h2>
+          <p class="section-subtitle" data-i18n="experience.subtitle">15 years building software across three countries and four industries</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p class="timeline-role" data-i18n="experience.grammarly_role">Software Engineer</p>
+              <p class="timeline-company" data-i18n="experience.grammarly_company">Grammarly (now Superhuman)</p>
+              <p class="timeline-period" data-i18n="experience.grammarly_location">Berlin, Germany</p>
+              <p class="timeline-description" data-i18n="experience.grammarly_desc">Working at the intersection of AI and productivity tooling. Building reliable backend systems for products that serve millions of users daily.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p class="timeline-role" data-i18n="experience.dh_role">Senior Software Engineer</p>
+              <p class="timeline-company" data-i18n="experience.dh_company">Delivery Hero</p>
+              <p class="timeline-period" data-i18n="experience.dh_location">Berlin, Germany</p>
+              <p class="timeline-description" data-i18n="experience.dh_desc">Tackling high-throughput distributed systems at one of the world's largest food delivery platforms. Orchestrating logistics in real time, handling unpredictable load patterns, and keeping hundreds of microservices in concert.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p class="timeline-role" data-i18n="experience.n26_role">Senior Software Engineer</p>
+              <p class="timeline-company" data-i18n="experience.n26_company">N26 Bank</p>
+              <p class="timeline-period" data-i18n="experience.n26_location">Berlin, Germany</p>
+              <p class="timeline-description" data-i18n="experience.n26_desc">Building systems in fintech where reliability is non-negotiable. A failed transaction is not just a bug — it is a broken promise to a customer.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p class="timeline-role" data-i18n="experience.zup_role">Senior Software Engineer</p>
+              <p class="timeline-company" data-i18n="experience.zup_company">Zup IT Innovation</p>
+              <p class="timeline-period" data-i18n="experience.zup_location">Brazil</p>
+              <p class="timeline-description" data-i18n="experience.zup_desc">Built the foundation in backend engineering across the JVM ecosystem. Contributed technical writing to the company's engineering blog and developed a habit of teaching what I learned.</p>
+            </div>
+          </div>
+          <div class="timeline-item timeline-item--earlier reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p class="timeline-role" data-i18n="experience.softbox_role">Software Engineer</p>
+              <p class="timeline-company" data-i18n="experience.softbox_company">Softbox (now Luizalabs)</p>
+              <p class="timeline-period" data-i18n="experience.softbox_location">Uberlandia, Brazil</p>
+              <p class="timeline-description" data-i18n="experience.softbox_desc">Architected core components of Ricardo Eletro's marketplace, one of Brazil's largest e-commerce platforms. Integrated the payment system and guided junior developers on backend best practices.</p>
+            </div>
+          </div>
+          <div class="timeline-item timeline-item--earlier reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p class="timeline-role" data-i18n="experience.quantica_role">Software Engineer</p>
+              <p class="timeline-company" data-i18n="experience.quantica_company">Quantica Networks</p>
+              <p class="timeline-period" data-i18n="experience.quantica_location">Uberlandia, Brazil</p>
+              <p class="timeline-description" data-i18n="experience.quantica_desc">Built multi-tenant SaaS applications on the .NET stack. Focused on domain-driven design, scalability, and strongly tested solutions.</p>
+            </div>
+          </div>
+          <div class="timeline-item timeline-item--earlier reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p class="timeline-role" data-i18n="experience.webroom_role">Software Engineer</p>
+              <p class="timeline-company" data-i18n="experience.webroom_company">Webroom</p>
+              <p class="timeline-period" data-i18n="experience.webroom_location">Uberlandia, Brazil</p>
+              <p class="timeline-description" data-i18n="experience.webroom_desc">First professional role. Developed web applications across PHP and .NET, working with multiple database systems and delivering projects for diverse clients.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Writing -->
+    <section id="writing" class="writing">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="writing.title">Writing</h2>
+          <p class="section-subtitle" data-i18n="writing.subtitle">Honest notes from someone who has been doing this long enough to have made most of the mistakes already</p>
+        </div>
+        <div class="articles-grid stagger">
+          <div class="article-card glass-card reveal">
+            <p class="article-card-source">Zup IT Engineering Blog</p>
+            <h3 class="article-card-title" data-i18n="writing.php_title">PHP 7.4 Arrow Functions</h3>
+            <p class="article-card-description" data-i18n="writing.php_desc">A practical walkthrough of one of PHP 7.4's most anticipated features. Breaks down how arrow functions simplify closures, reduce boilerplate, and bring PHP's anonymous function syntax closer to what developers expect from modern languages.</p>
+            <a href="https://medium.com/zup-it/php-7-4-arrow-functions-8f7079932762" class="article-card-link" target="_blank" rel="noopener">
+              <span data-i18n="writing.read_on_medium">Read on Medium</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <div class="article-card glass-card reveal">
+            <p class="article-card-source">Zup IT Engineering Blog</p>
+            <h3 class="article-card-title" data-i18n="writing.kotlin_title">Extension Functions in Kotlin</h3>
+            <p class="article-card-description" data-i18n="writing.kotlin_desc">Explores one of Kotlin's most powerful features for writing expressive code. Demonstrates how extension functions let developers add behavior to existing classes without inheritance or wrapper patterns.</p>
+            <a href="https://medium.com/zup-it/extension-functions-em-kotlin-53b70e678f02" class="article-card-link" target="_blank" rel="noopener">
+              <span data-i18n="writing.read_on_medium">Read on Medium</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beyond the Code -->
+    <section id="beyond" class="beyond">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="beyond.title">Beyond the Code</h2>
+        </div>
+        <div class="beyond-content">
+          <div class="beyond-text reveal">
+            <p data-i18n="beyond.p1">When I am not at my desk, you will usually find me with a guitar in my hands or headphones on, lost in a playlist. Music has been a constant in my life, right alongside code.</p>
+            <p><span data-i18n="beyond.p2_prefix">I am also a photographer — I shoot mostly on the streets and around Berlin, and I share that work on</span> <a href="https://instagram.com/okano.png" target="_blank" rel="noopener" style="color: var(--accent);">@okano.png</a><span data-i18n="beyond.p2_suffix">. And yes, I play video games. It is a good way to turn the problem-solving part of my brain off for a while — or honestly, just redirect it toward a different kind of puzzle.</span></p>
+          </div>
+          <div class="beyond-interests reveal">
+            <div class="interest-item">
+              <div class="interest-icon">&#127928;</div>
+              <span class="interest-label" data-i18n="beyond.guitar">Guitar</span>
+            </div>
+            <div class="interest-item">
+              <div class="interest-icon">&#127911;</div>
+              <span class="interest-label" data-i18n="beyond.music">Music</span>
+            </div>
+            <div class="interest-item">
+              <div class="interest-icon">&#128247;</div>
+              <span class="interest-label" data-i18n="beyond.photography">Photography</span>
+            </div>
+            <div class="interest-item">
+              <div class="interest-icon">&#127918;</div>
+              <span class="interest-label" data-i18n="beyond.gaming">Gaming</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="contact.title">Let's Connect</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">Find me around the internet</p>
+        </div>
+        <div class="social-links stagger">
+          <a href="https://github.com/williamokano" class="social-link reveal" target="_blank" rel="noopener">
+            <span class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </span>
+            <span class="social-label">GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/williamokano" class="social-link reveal" target="_blank" rel="noopener">
+            <span class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </span>
+            <span class="social-label">LinkedIn</span>
+          </a>
+          <a href="https://medium.com/@williamokano" class="social-link reveal" target="_blank" rel="noopener">
+            <span class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            </span>
+            <span class="social-label">Medium</span>
+          </a>
+          <a href="https://instagram.com/okano_william" class="social-link reveal" target="_blank" rel="noopener">
+            <span class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </span>
+            <span class="social-label">Instagram</span>
+          </a>
+          <a href="https://instagram.com/okano.png" class="social-link reveal" target="_blank" rel="noopener">
+            <span class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </span>
+            <span class="social-label">Photography</span>
+          </a>
+          <a href="https://www.quora.com/profile/William-Okano" class="social-link reveal" target="_blank" rel="noopener">
+            <span class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </span>
+            <span class="social-label">Quora</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-tagline" data-i18n="footer.tagline">println("Let's build something worth maintaining.")</p>
+      <div class="footer-links">
+        <a href="https://github.com/williamokano" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/williamokano" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://medium.com/@williamokano" target="_blank" rel="noopener">Medium</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  <script src="i18n.js" defer></script>
 </body>
-
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Eu sou o William Okano - Dev</title>
+</head>
+<style type="text/css">
+    blink {
+        animation: blink-animation 1s steps(2, start) infinite;
+        -webkit-animation: blink-animation 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink-animation {
+        to {
+            visibility: hidden;
+        }
+    }
+
+    @-webkit-keyframes blink-animation {
+        to {
+            visibility: hidden;
+        }
+    }
+</style>
+<!-- This is obviously a joke, this site is by no means showing my code skills, it's just fun -->
+<body>
+    <h1>William Okano</h1>
+    <div>Dev</div>
+    <marquee>Berlin, Germany</marquee>
+    <blink>From: Cravinhos, São Paulo, Brasil</blink></br></br>
+    <b>Bem vindo ao meu maravilhoso sait, muitas tecnologia de muintão.</b>
+
+    <script src="cheerleader.min.js"></script>
+    <script>
+        const initialTitle = cheerYourTitle.create('Eu sou dev de webmaister').blink(500);
+
+        setTimeout(function () {
+            initialTitle.stop();
+            cheerYourTitle.create('Eu sou o William Okano - Dev').slide(100, 22);
+        }, 3000);
+    </script>
+</body>
+
+</html>

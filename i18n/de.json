@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "experience": "Erfahrung",
+    "writing": "Artikel",
+    "beyond": "Abseits des Codes",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "// Hi, ich bin",
+    "subtitle": "Ich baue zuverlässige Backend-Systeme und helfe Engineering-Teams dabei, mit Vertrauen zu liefern. Nach fünfzehn Jahren bin ich immer noch überzeugt: Der beste Code ist der, den die nächste Person mühelos lesen kann.",
+    "cta_projects": "Projekte ansehen",
+    "cta_contact": "Kontakt aufnehmen"
+  },
+  "about": {
+    "title": "Über mich",
+    "p1": "Ich bin in Brasilien aufgewachsen, habe Informatik an der Universidade Federal de Uberlândia studiert und angefangen, professionell Code zu schreiben, bevor ich in Deutschland ein Auto hätte mieten dürfen. Das ist über fünfzehn Jahre her. Seitdem habe ich in den Bereichen Fintech, Food Delivery und Produktivitätstools gearbeitet — an Systemen, die Millionen von Nutzern bedienen, und an der Seite der Engineers, die sie betreuen.",
+    "p2": "Mein Weg führte mich von Brasilien nach Berlin, wo ich in den letzten Jahren bei Unternehmen wie N26 Bank, Delivery Hero und Grammarly gearbeitet habe. An jeder Station war das Muster dasselbe: Ich gehe die schwierigen Backend-Probleme an, setze mich für saubere und wartbare Lösungen ein und sorge dafür, dass die Menschen um mich herum alles haben, was sie brauchen, um ihre beste Arbeit zu leisten.",
+    "p3": "Ich bin im Kern ein Backend-Engineer — Go, Kotlin, JVM, verteilte Systeme — aber ich bewege mich problemlos über den Stack hinweg, wenn das Problem es erfordert. Was mir wichtig ist, ist nicht die Sprache oder das Framework. Sondern ob wir etwas bauen, das gut funktioniert, gut lesbar ist und auch in sechs Monaten noch Sinn ergibt, wenn jemand anderes den Pull Request öffnet."
+  },
+  "skills": {
+    "title": "Skills & Technologien",
+    "subtitle": "Die Werkzeuge, auf die ich beim Bau zuverlässiger Systeme setze",
+    "languages": "Programmiersprachen",
+    "backend": "Backend & Systeme",
+    "infra": "Infrastruktur & DevOps",
+    "web3": "Web3 & Blockchain",
+    "tooling": "Tooling & Umgebung"
+  },
+  "projects": {
+    "title": "Ausgewählte Projekte",
+    "subtitle_prefix": "Eine Auswahl aus",
+    "subtitle_link": "81 öffentlichen Repositories",
+    "terraform_title": "Terraform Provider für Litmus Chaos",
+    "terraform_desc": "Ein eigener Terraform Provider, der Chaos-Engineering-Experimente in den Infrastructure-as-Code-Workflow integriert. Ermöglicht Teams, Chaos-Experimente neben ihrer Infrastruktur zu definieren, zu versionieren und zu automatisieren.",
+    "lox_title": "Lox-Sprachinterpreter",
+    "lox_desc": "Eine Implementierung der Programmiersprache Lox von Grund auf, basierend auf Robert Nystroms Crafting Interpreters. Umfasst lexikalische Analyse, Parsing, AST-Auswertung und Laufzeitausführung.",
+    "websocket_title": "Echtzeit-WebSocket-Chat",
+    "websocket_desc": "Ein nebenläufiges Chatsystem mit Terminal-UI und Webclient, verbunden über WebSocket-Kommunikation. Demonstriert bidirektionales Echtzeit-Messaging und Verbindungsmanagement.",
+    "smartcontract_title": "Smart-Contract-Entwicklung & Testing",
+    "smartcontract_desc": "Eine Entwicklungsumgebung zum Schreiben, Deployen und Testen von Solidity Smart Contracts auf Ethereum. Enthält eine vollständige Test-Suite mit Mocha und Chai — Backend-Engineering-Standards auf Blockchain-Entwicklung angewandt.",
+    "pgbackup_title": "PostgreSQL-Backup-Tool",
+    "pgbackup_desc": "Ein leichtgewichtiges, containerisiertes Tool zur Automatisierung von PostgreSQL-Datenbankbackups. Auf betriebliche Einfachheit ausgelegt — in Docker verpacken, auf eine Datenbank zeigen und den Rest erledigen lassen.",
+    "hashicorp_title": "HashiCorp Plugin-Architektur",
+    "hashicorp_desc": "Eine Referenzimplementierung von HashiCorps go-plugin-Architektur. Zeigt, wie erweiterbare Systeme mit prozessseparierten Plugins gebaut werden, die über RPC kommunizieren.",
+    "source_code": "Quellcode"
+  },
+  "experience": {
+    "title": "Erfahrung",
+    "subtitle": "15 Jahre Softwareentwicklung in drei Ländern und vier Branchen",
+    "grammarly_role": "Software Engineer",
+    "grammarly_company": "Grammarly (jetzt Superhuman)",
+    "grammarly_location": "Berlin, Deutschland",
+    "grammarly_desc": "Arbeite an der Schnittstelle von KI und Produktivitätstools. Baue zuverlässige Backend-Systeme für Produkte, die täglich Millionen von Nutzern bedienen.",
+    "dh_role": "Senior Software Engineer",
+    "dh_company": "Delivery Hero",
+    "dh_location": "Berlin, Deutschland",
+    "dh_desc": "Hochdurchsatz-verteilte Systeme bei einer der weltweit größten Food-Delivery-Plattformen. Logistik in Echtzeit orchestrieren, unvorhersehbare Lastmuster bewältigen und hunderte Microservices im Einklang halten.",
+    "n26_role": "Senior Software Engineer",
+    "n26_company": "N26 Bank",
+    "n26_location": "Berlin, Deutschland",
+    "n26_desc": "Systeme in Fintech bauen, wo Zuverlässigkeit nicht verhandelbar ist. Eine fehlgeschlagene Transaktion ist nicht einfach ein Bug — sie ist ein gebrochenes Versprechen an den Kunden.",
+    "zup_role": "Senior Software Engineer",
+    "zup_company": "Zup IT Innovation",
+    "zup_location": "Brasilien",
+    "zup_desc": "Hier habe ich mein Fundament im Backend-Engineering quer durch das JVM-Ökosystem gelegt. Technische Beiträge für den Engineering-Blog des Unternehmens verfasst und mir angewöhnt, weiterzugeben, was ich gelernt habe.",
+    "softbox_role": "Software Engineer",
+    "softbox_company": "Softbox (jetzt Luizalabs)",
+    "softbox_location": "Uberlandia, Brasilien",
+    "softbox_desc": "Kernkomponenten des Ricardo-Eletro-Marktplatzes entwickelt, einer der grossten E-Commerce-Plattformen Brasiliens. Zahlungssystem integriert und Junior-Entwickler bei Backend-Best-Practices angeleitet.",
+    "quantica_role": "Software Engineer",
+    "quantica_company": "Quantica Networks",
+    "quantica_location": "Uberlandia, Brasilien",
+    "quantica_desc": "Multi-Tenant-SaaS-Anwendungen auf dem .NET-Stack gebaut. Fokus auf Domain-Driven Design, Skalierbarkeit und umfassend getestete Losungen.",
+    "webroom_role": "Software Engineer",
+    "webroom_company": "Webroom",
+    "webroom_location": "Uberlandia, Brasilien",
+    "webroom_desc": "Erste berufliche Station. Webanwendungen in PHP und .NET entwickelt, mit verschiedenen Datenbanksystemen gearbeitet und Projekte fur diverse Kunden geliefert."
+  },
+  "writing": {
+    "title": "Artikel",
+    "subtitle": "Ehrliche Notizen von jemandem, der das lang genug macht, um die meisten Fehler schon selbst gemacht zu haben",
+    "php_title": "PHP 7.4 Arrow Functions",
+    "php_desc": "Ein praxisnaher Durchgang durch eines der meisterwarteten Features von PHP 7.4. Erklärt, wie Arrow Functions Closures vereinfachen, Boilerplate reduzieren und die anonyme Funktionssyntax von PHP näher an das bringen, was Entwickler von modernen Sprachen erwarten.",
+    "kotlin_title": "Extension Functions in Kotlin",
+    "kotlin_desc": "Erkundet eines der mächtigsten Kotlin-Features für ausdrucksstarken Code. Zeigt, wie Extension Functions es ermöglichen, bestehendes Verhalten zu erweitern — ohne Vererbung und ohne Wrapper-Patterns.",
+    "read_on_medium": "Auf Medium lesen"
+  },
+  "beyond": {
+    "title": "Abseits des Codes",
+    "p1": "Wenn ich nicht am Schreibtisch sitze, findet man mich meistens mit einer Gitarre in der Hand oder Kopfhörern auf, versunken in eine Playlist. Musik ist eine Konstante in meinem Leben — direkt neben dem Code.",
+    "p2_prefix": "Ich bin außerdem Fotograf — ich fotografiere vor allem auf der Straße und rund um Berlin und teile meine Arbeiten auf",
+    "p2_suffix": ". Und ja, ich zocke auch. Es ist ein guter Weg, den problemlösenden Teil meines Gehirns mal abzuschalten — oder ehrlich gesagt, ihn einfach auf eine andere Art von Rätsel umzulenken.",
+    "guitar": "Gitarre",
+    "music": "Musik",
+    "photography": "Fotografie",
+    "gaming": "Gaming"
+  },
+  "contact": {
+    "title": "Lass uns vernetzen",
+    "subtitle": "Hier findest du mich im Netz"
+  },
+  "footer": {
+    "tagline": "println(\"Lass uns etwas bauen, das es wert ist, gepflegt zu werden.\")"
+  },
+  "meta": {
+    "title": "William Okano — Staff Software Engineer",
+    "description": "Staff-Level Software Engineer in Berlin mit über 15 Jahren Erfahrung im Aufbau zuverlässiger Backend-Systeme in Fintech, Logistik und KI/Produktivität."
+  }
+}
