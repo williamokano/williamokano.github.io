@@ -16,7 +16,7 @@
   },
   "about": {
     "title": "Über mich",
-    "p1": "Ich bin in Brasilien aufgewachsen, habe Informatik an der Universidade Federal de Uberlândia studiert und angefangen, professionell Code zu schreiben, bevor ich in Deutschland ein Auto hätte mieten dürfen. Das ist über fünfzehn Jahre her. Seitdem habe ich in den Bereichen Fintech, Food Delivery und Produktivitätstools gearbeitet — an Systemen, die Millionen von Nutzern bedienen, und an der Seite der Engineers, die sie betreuen.",
+    "p1": "Ich bin in Brasilien aufgewachsen, habe Informationssysteme an der Universidade Federal de Uberlândia studiert und angefangen, professionell Code zu schreiben, bevor ich in Deutschland ein Auto hätte mieten dürfen. Das ist über fünfzehn Jahre her. Seitdem habe ich in den Bereichen Fintech, Food Delivery und Produktivitätstools gearbeitet — an Systemen, die Millionen von Nutzern bedienen, und an der Seite der Engineers, die sie betreuen.",
     "p2": "Mein Weg führte mich von Brasilien nach Berlin, wo ich in den letzten Jahren bei Unternehmen wie N26 Bank, Delivery Hero und Grammarly gearbeitet habe. An jeder Station war das Muster dasselbe: Ich gehe die schwierigen Backend-Probleme an, setze mich für saubere und wartbare Lösungen ein und sorge dafür, dass die Menschen um mich herum alles haben, was sie brauchen, um ihre beste Arbeit zu leisten.",
     "p3": "Ich bin im Kern ein Backend-Engineer — Go, Kotlin, JVM, verteilte Systeme — aber ich bewege mich problemlos über den Stack hinweg, wenn das Problem es erfordert. Was mir wichtig ist, ist nicht die Sprache oder das Framework. Sondern ob wir etwas bauen, das gut funktioniert, gut lesbar ist und auch in sechs Monaten noch Sinn ergibt, wenn jemand anderes den Pull Request öffnet."
   },

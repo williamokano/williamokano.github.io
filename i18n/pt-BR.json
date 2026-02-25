@@ -16,7 +16,7 @@
   },
   "about": {
     "title": "Sobre",
-    "p1": "Cresci no Brasil, estudei Ciência da Computação na Universidade Federal de Uberlândia e comecei a programar profissionalmente antes de poder alugar um carro. Isso foi há mais de quinze anos. Desde então, trabalhei em fintech, delivery e ferramentas de produtividade — construindo sistemas que atendem milhões de usuários e mentorando os engenheiros que os mantêm.",
+    "p1": "Cresci no Brasil, estudei Sistemas de Informação na Universidade Federal de Uberlândia e comecei a programar profissionalmente antes de poder alugar um carro. Isso foi há mais de quinze anos. Desde então, trabalhei em fintech, delivery e ferramentas de produtividade — construindo sistemas que atendem milhões de usuários e mentorando os engenheiros que os mantêm.",
     "p2": "Minha trajetória me levou do Brasil a Berlim, onde passei os últimos anos trabalhando em empresas como N26 Bank, Delivery Hero e Grammarly. Em cada parada, o padrão foi o mesmo: mergulho nos problemas difíceis de backend, defendo soluções limpas e mantíveis, e garanto que as pessoas ao meu redor tenham o que precisam para fazer seu melhor trabalho.",
     "p3": "Sou um engenheiro de backend por natureza — Go, Kotlin, JVM, sistemas distribuídos — mas me viro bem em outras camadas da stack quando o problema exige. O que importa pra mim não é a linguagem nem o framework. É se estamos construindo algo que funciona bem, que se lê bem, e que ainda vai fazer sentido daqui a seis meses quando outra pessoa abrir o pull request."
   },
