@@ -10,7 +10,7 @@
 
 const SCROLL_THRESHOLD = 50;
 const THEME_STORAGE_KEY = 'theme';
-const TYPING_SPEED_MS = 60;
+const TYPING_SPEED_MS = 35;
 const TYPING_CURSOR_CLASS = 'typing-cursor';
 const THROTTLE_MS = 16; // ~60 fps
 

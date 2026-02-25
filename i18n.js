@@ -117,12 +117,18 @@ function applyTranslations(translations) {
     }
   });
 
-  // Update page title and meta description
+  // Update page title, meta description, and social tags
   const metaTitle = getNestedValue(translations, 'meta.title');
   const metaDesc = getNestedValue(translations, 'meta.description');
-  if (metaTitle) document.title = metaTitle;
+  if (metaTitle) {
+    document.title = metaTitle;
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', metaTitle);
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', metaTitle);
+  }
   if (metaDesc) {
     document.querySelector('meta[name="description"]')?.setAttribute('content', metaDesc);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', metaDesc);
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', metaDesc);
   }
 }
 
