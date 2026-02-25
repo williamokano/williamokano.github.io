@@ -86,7 +86,8 @@
     "php_desc": "Ein praxisnaher Durchgang durch eines der meisterwarteten Features von PHP 7.4. Erklärt, wie Arrow Functions Closures vereinfachen, Boilerplate reduzieren und die anonyme Funktionssyntax von PHP näher an das bringen, was Entwickler von modernen Sprachen erwarten.",
     "kotlin_title": "Extension Functions in Kotlin",
     "kotlin_desc": "Erkundet eines der mächtigsten Kotlin-Features für ausdrucksstarken Code. Zeigt, wie Extension Functions es ermöglichen, bestehendes Verhalten zu erweitern — ohne Vererbung und ohne Wrapper-Patterns.",
-    "read_on_medium": "Auf Medium lesen"
+    "read_on_medium": "Auf Medium lesen",
+    "source_zup": "Zup IT Engineering Blog"
   },
   "beyond": {
     "title": "Abseits des Codes",
@@ -100,10 +101,57 @@
   },
   "contact": {
     "title": "Lass uns vernetzen",
-    "subtitle": "Hier findest du mich im Netz"
+    "subtitle": "Hier findest du mich im Netz",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "medium": "Medium",
+    "instagram": "Instagram",
+    "photography": "Fotografie",
+    "quora": "Quora"
   },
   "footer": {
     "tagline": "println(\"Lass uns etwas bauen, das es wert ist, gepflegt zu werden.\")"
+  },
+  "aria": {
+    "skip_to_content": "Zum Inhalt springen",
+    "theme_toggle_light": "Zum hellen Modus wechseln",
+    "theme_toggle_dark": "Zum dunklen Modus wechseln"
+  },
+  "tags": {
+    "go": "Go",
+    "kotlin": "Kotlin",
+    "java": "Java",
+    "typescript": "TypeScript",
+    "python": "Python",
+    "php": "PHP",
+    "rest_apis": "REST APIs",
+    "websockets": "WebSockets",
+    "microservices": "Microservices",
+    "event_driven": "Ereignisgesteuert",
+    "databases": "Datenbanken",
+    "terraform": "Terraform",
+    "docker": "Docker",
+    "cicd": "CI/CD",
+    "chaos_engineering": "Chaos Engineering",
+    "cloud": "Cloud",
+    "solidity": "Solidity",
+    "smart_contracts": "Smart Contracts",
+    "ethereum": "Ethereum",
+    "ethersjs": "ethers.js",
+    "git": "Git",
+    "neovim": "Neovim",
+    "linux": "Linux",
+    "shell_scripting": "Shell-Scripting",
+    "interpreters": "Interpreter",
+    "language_design": "Sprachdesign",
+    "tui": "TUI",
+    "concurrency": "Nebenläufigkeit",
+    "javascript": "JavaScript",
+    "mocha": "Mocha",
+    "postgresql": "PostgreSQL",
+    "hashicorp": "HashiCorp",
+    "plugin_systems": "Plugin-Systeme",
+    "rpc": "RPC"
   },
   "meta": {
     "title": "William Okano — Software Engineer",

@@ -252,7 +252,11 @@ function initThemeToggle() {
   function applyTheme(theme) {
     root.setAttribute('data-theme', theme);
     localStorage.setItem(THEME_STORAGE_KEY, theme);
-    btn?.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+    const targetMode = theme === 'dark' ? 'light' : 'dark';
+    const label = targetMode === 'light'
+      ? (btn?.dataset.ariaLight || 'Switch to light mode')
+      : (btn?.dataset.ariaDark || 'Switch to dark mode');
+    btn?.setAttribute('aria-label', label);
   }
 
   applyTheme(getInitialTheme());
@@ -276,35 +280,51 @@ function initThemeToggle() {
 // 4. Typing Effect (Hero Section)
 // ---------------------------------------------------------------------------
 
-function initTypingEffect() {
-  const el = dom.heroSubtitle();
-  if (!el) return;
+let _typingTimer = null;
 
-  const fullText = el.textContent.trim();
+/**
+ * Type text into the hero subtitle with a character-by-character animation.
+ * Called by the i18n module after translations are loaded or switched.
+ * Cancels any in-progress typing before starting.
+ */
+window.typeHeroSubtitle = function (text) {
+  const el = dom.heroSubtitle();
+  if (!el || !text) return;
+
+  // Cancel any in-progress typing
+  if (_typingTimer != null) {
+    clearTimeout(_typingTimer);
+    _typingTimer = null;
+  }
+
+  el.setAttribute('aria-label', text);
 
   if (prefersReducedMotion()) {
-    el.textContent = fullText;
+    el.textContent = text;
+    el.classList.remove(TYPING_CURSOR_CLASS);
     return;
   }
 
   el.textContent = '';
   el.classList.add(TYPING_CURSOR_CLASS);
-  el.setAttribute('aria-label', fullText);
 
   let index = 0;
 
   function typeChar() {
-    if (index < fullText.length) {
-      el.textContent += fullText[index];
+    if (index < text.length) {
+      el.textContent += text[index];
       index++;
-      setTimeout(typeChar, TYPING_SPEED_MS);
+      _typingTimer = setTimeout(typeChar, TYPING_SPEED_MS);
     } else {
-      setTimeout(() => el.classList.remove(TYPING_CURSOR_CLASS), 1500);
+      _typingTimer = setTimeout(() => {
+        el.classList.remove(TYPING_CURSOR_CLASS);
+        _typingTimer = null;
+      }, 1500);
     }
   }
 
   typeChar();
-}
+};
 
 // ---------------------------------------------------------------------------
 // 5. Scroll Progress Indicator
@@ -355,6 +375,5 @@ function applyReducedMotionStyles() {
   initThemeToggle();
   initScrollReveal();
   initNavigation();
-  initTypingEffect();
   initScrollProgress();
 })();

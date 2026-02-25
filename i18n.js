@@ -102,11 +102,19 @@ function getNestedValue(obj, keyPath) {
 function applyTranslations(translations) {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
+    // Skip hero subtitle — handled by typing effect below
+    if (key === 'hero.subtitle') return;
     const value = getNestedValue(translations, key);
     if (value != null) {
       el.textContent = value;
     }
   });
+
+  // Trigger typing effect for hero subtitle
+  const subtitleText = getNestedValue(translations, 'hero.subtitle');
+  if (subtitleText && typeof window.typeHeroSubtitle === 'function') {
+    window.typeHeroSubtitle(subtitleText);
+  }
 
   // Handle data-i18n-placeholder, data-i18n-aria-label, etc.
   document.querySelectorAll('[data-i18n-aria-label]').forEach((el) => {
@@ -116,6 +124,20 @@ function applyTranslations(translations) {
       el.setAttribute('aria-label', value);
     }
   });
+
+  // Update theme toggle aria-label translations
+  const themeBtn = document.querySelector('.theme-toggle');
+  if (themeBtn) {
+    const lightLabel = getNestedValue(translations, 'aria.theme_toggle_light');
+    const darkLabel = getNestedValue(translations, 'aria.theme_toggle_dark');
+    if (lightLabel) themeBtn.dataset.ariaLight = lightLabel;
+    if (darkLabel) themeBtn.dataset.ariaDark = darkLabel;
+    // Refresh current aria-label based on active theme
+    const currentTheme = document.documentElement.getAttribute('data-theme') ?? 'dark';
+    const targetMode = currentTheme === 'dark' ? 'light' : 'dark';
+    const label = targetMode === 'light' ? lightLabel : darkLabel;
+    if (label) themeBtn.setAttribute('aria-label', label);
+  }
 
   // Update page title, meta description, and social tags
   const metaTitle = getNestedValue(translations, 'meta.title');
