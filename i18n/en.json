@@ -1,7 +1,6 @@
 {
   "nav": {
     "about": "About",
-    "approach": "How I Work",
     "skills": "Skills",
     "projects": "Projects",
     "experience": "Experience",
@@ -34,18 +33,6 @@
     "p1": "I grew up in Brazil, studied Information Systems at Universidade Federal de Uberlândia, and started writing code professionally before I could legally rent a car. That was over fifteen years ago. Since then, I have worked across fintech, food delivery, and productivity tooling — building systems that serve millions of users and mentoring the engineers who maintain them.",
     "p2": "My path took me from Brazil to Berlin, by way of N26 Bank, Delivery Hero, and Grammarly. Today I am a Staff Software Engineer at Qonto, on the Wealth & Market team — the people behind the investment side of the product. At each stop, the pattern has been the same: I dig into the hard backend problems, push for clean and maintainable solutions, and make sure the people around me have what they need to do their best work.",
     "p3": "I am a backend engineer at heart — Go, Kotlin, JVM, distributed systems — but I am comfortable moving across the stack when the problem calls for it. What matters to me is not the language or the framework. It is whether we are building something that works well, reads well, and will still make sense six months from now when someone else opens the pull request."
-  },
-  "approach": {
-    "title": "How I Work",
-    "subtitle": "What the staff part of the job actually looks like, in my experience",
-    "constraint_title": "Start with the constraint",
-    "constraint_desc": "Most architecture arguments dissolve the moment the real constraint is on the table — a latency budget, a regulatory deadline, the size of the team that has to maintain it. I write the constraint down first and let it choose the design.",
-    "boring_title": "Boring where it counts",
-    "boring_desc": "Novelty belongs in the parts of a system you can afford to throw away. Anything touching money, customer data, or the critical path gets the dullest, best-understood option available — and a test that proves it.",
-    "multiply_title": "Multiply, don't bottleneck",
-    "multiply_desc": "A design is only good if the team can extend it without me in the room. That means decisions written down, reviews that teach instead of gate, and handing the genuinely interesting problems to someone else.",
-    "own_title": "Own it past the merge",
-    "own_desc": "Shipping is the middle of the job, not the end. I stay attached through rollout, dashboards, and the first incident — that is where a design gets its honest review."
   },
   "skills": {
     "title": "Skills & Technologies",

@@ -1,7 +1,6 @@
 {
   "nav": {
     "about": "Über mich",
-    "approach": "Arbeitsweise",
     "skills": "Skills",
     "projects": "Projekte",
     "experience": "Erfahrung",
@@ -34,18 +33,6 @@
     "p1": "Ich bin in Brasilien aufgewachsen, habe Informationssysteme an der Universidade Federal de Uberlândia studiert und angefangen, professionell Code zu schreiben, bevor ich in Deutschland ein Auto hätte mieten dürfen. Das ist über fünfzehn Jahre her. Seitdem habe ich in den Bereichen Fintech, Food Delivery und Produktivitätstools gearbeitet — an Systemen, die Millionen von Nutzern bedienen, und an der Seite der Engineers, die sie betreuen.",
     "p2": "Mein Weg führte mich von Brasilien nach Berlin — über N26 Bank, Delivery Hero und Grammarly. Heute bin ich Staff Software Engineer bei Qonto, im Team Wealth & Market, das hinter dem Investment-Teil des Produkts steht. An jeder Station war das Muster dasselbe: Ich gehe die schwierigen Backend-Probleme an, setze mich für saubere und wartbare Lösungen ein und sorge dafür, dass die Menschen um mich herum alles haben, was sie brauchen, um ihre beste Arbeit zu leisten.",
     "p3": "Ich bin im Kern ein Backend-Engineer — Go, Kotlin, JVM, verteilte Systeme — aber ich bewege mich problemlos über den Stack hinweg, wenn das Problem es erfordert. Was mir wichtig ist, ist nicht die Sprache oder das Framework. Sondern ob wir etwas bauen, das gut funktioniert, gut lesbar ist und auch in sechs Monaten noch Sinn ergibt, wenn jemand anderes den Pull Request öffnet."
-  },
-  "approach": {
-    "title": "Arbeitsweise",
-    "subtitle": "Was der Staff-Teil der Arbeit tatsächlich bedeutet — aus meiner Erfahrung",
-    "constraint_title": "Mit der Einschränkung anfangen",
-    "constraint_desc": "Die meisten Architekturdebatten lösen sich in dem Moment auf, in dem die echte Einschränkung auf dem Tisch liegt — ein Latenzbudget, eine regulatorische Frist, die Größe des Teams, das es warten muss. Ich schreibe die Einschränkung zuerst auf und lasse sie das Design wählen.",
-    "boring_title": "Langweilig, wo es zählt",
-    "boring_desc": "Neues gehört in die Teile eines Systems, die man wegwerfen kann. Alles, was Geld, Kundendaten oder den kritischen Pfad berührt, bekommt die langweiligste, am besten verstandene Option — und einen Test, der es beweist.",
-    "multiply_title": "Multiplizieren statt Flaschenhals sein",
-    "multiply_desc": "Ein Design taugt nur dann etwas, wenn das Team es ohne mich im Raum weiterentwickeln kann. Das heißt: Entscheidungen schriftlich festhalten, Reviews, die erklären statt blockieren, und die wirklich spannenden Probleme abgeben.",
-    "own_title": "Verantwortung endet nicht beim Merge",
-    "own_desc": "Ausliefern ist die Mitte der Arbeit, nicht das Ende. Ich bleibe durch Rollout, Dashboards und den ersten Incident dabei — dort bekommt ein Design sein ehrliches Review."
   },
   "skills": {
     "title": "Skills & Technologien",

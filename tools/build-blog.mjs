@@ -201,7 +201,6 @@ function renderHeader(lang, dict, hrefFor) {
   const home = `/?lang=${encodeURIComponent(lang)}`;
   const links = [
     [`${home}#about`, t(dict, 'nav.about')],
-    [`${home}#approach`, t(dict, 'nav.approach')],
     [`${home}#projects`, t(dict, 'nav.projects')],
     [`${home}#experience`, t(dict, 'nav.experience')],
     [`${home}#contact`, t(dict, 'nav.contact')],
