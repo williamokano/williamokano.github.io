@@ -97,7 +97,7 @@
     "n26_role": "Senior Software Engineer",
     "n26_company": "N26 Bank",
     "n26_location": "Berlin, Germany",
-    "n26_desc": "Building systems in fintech where reliability is non-negotiable. A failed transaction is not just a bug — it is a broken promise to a customer.",
+    "n26_desc": "Worked across the cards domain: card lifecycle and the configuration layer behind limits, flags, and the rest of what a card is allowed to do. Extracted authorization out of the monolith into a service of its own, and revamped settlement to process its batches over Kafka — cutting the run from eight hours to two. Fintech is where reliability stops being negotiable: a failed transaction is not just a bug, it is a broken promise to a customer.",
     "zup_role": "Senior Software Engineer",
     "zup_company": "Zup IT Innovation",
     "zup_location": "Brazil",

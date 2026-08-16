@@ -97,7 +97,7 @@
     "n26_role": "Senior Software Engineer",
     "n26_company": "N26 Bank",
     "n26_location": "Berlim, Alemanha",
-    "n26_desc": "Construindo sistemas em fintech onde confiabilidade não é negociável. Uma transação que falha não é só um bug — é uma promessa quebrada com o cliente.",
+    "n26_desc": "Atuei no domínio de cartões: ciclo de vida do cartão e a camada de configuração por trás de limites, flags e o resto do que um cartão pode fazer. Extraí a autorização do monolito para um serviço próprio e reformulei o settlement para processar os lotes via Kafka — o processamento caiu de oito horas para duas. Fintech é onde confiabilidade deixa de ser negociável: uma transação que falha não é só um bug, é uma promessa quebrada com o cliente.",
     "zup_role": "Senior Software Engineer",
     "zup_company": "Zup IT Innovation",
     "zup_location": "Brasil",

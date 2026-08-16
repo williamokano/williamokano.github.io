@@ -97,7 +97,7 @@
     "n26_role": "Senior Software Engineer",
     "n26_company": "N26 Bank",
     "n26_location": "Berlin, Deutschland",
-    "n26_desc": "Systeme in Fintech bauen, wo Zuverlässigkeit nicht verhandelbar ist. Eine fehlgeschlagene Transaktion ist nicht einfach ein Bug — sie ist ein gebrochenes Versprechen an den Kunden.",
+    "n26_desc": "Im Karten-Bereich gearbeitet: Card-Lifecycle und die Konfigurationsebene hinter Limits, Flags und allem anderen, was eine Karte darf. Die Autorisierung aus dem Monolithen in einen eigenen Service herausgelöst und das Settlement überarbeitet, sodass die Batches über Kafka laufen — von acht Stunden auf zwei. Fintech ist der Ort, an dem Zuverlässigkeit aufhört verhandelbar zu sein: Eine fehlgeschlagene Transaktion ist nicht einfach ein Bug, sie ist ein gebrochenes Versprechen an den Kunden.",
     "zup_role": "Senior Software Engineer",
     "zup_company": "Zup IT Innovation",
     "zup_location": "Brasilien",
