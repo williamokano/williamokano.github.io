@@ -108,6 +108,29 @@
     }
   }
 
+  /* --- Empty state (no posts published yet) --- */
+  .blog-empty {
+    display: grid;
+    justify-items: center;
+    gap: var(--space-md);
+    padding-block: var(--space-2xl);
+    text-align: center;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-muted);
+
+    & svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    & p {
+      max-width: 32ch;
+    }
+  }
+
   /* --- Post --- */
   .post-container {
     width: min(92%, 46rem);

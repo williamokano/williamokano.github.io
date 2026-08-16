@@ -138,10 +138,18 @@ function buildCard(post, lang, translations) {
 
 /**
  * Render the latest posts. Safe to call repeatedly — it replaces its own output.
+ *
+ * With nothing published yet, the home page says nothing about a blog: the
+ * "From the blog" group and the hero button stay hidden until the first post
+ * exists, rather than advertising an empty page. Both appear on their own as
+ * soon as one is built.
  */
 window.renderLatestPosts = async function (lang, translations) {
   const container = document.querySelector('[data-latest-posts]');
   if (!container) return;
+
+  const group = container.closest('.writing-group');
+  const heroCta = document.querySelector('[data-blog-cta]');
 
   const index = await loadPostsIndex();
   const posts = (index.posts ?? []).slice(0, LATEST_POSTS_COUNT);
@@ -149,9 +157,8 @@ window.renderLatestPosts = async function (lang, translations) {
   container.replaceChildren();
 
   if (!posts.length) {
-    container.append(
-      element('p', 'writing-empty', translate(translations, 'blog.empty', 'No posts yet.'))
-    );
+    group?.setAttribute('hidden', '');
+    heroCta?.setAttribute('hidden', '');
     return;
   }
 
@@ -160,5 +167,7 @@ window.renderLatestPosts = async function (lang, translations) {
     .filter(Boolean);
 
   container.append(...cards);
+  group?.removeAttribute('hidden');
+  heroCta?.removeAttribute('hidden');
   window.observeReveals?.(cards);
 };

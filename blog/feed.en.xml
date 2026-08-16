@@ -6,24 +6,6 @@
     <description>Notes on backend systems, the teams that build them, and the occasional detour</description>
     <language>en</language>
     <atom:link href="https://okano.dev/blog/feed.en.xml" rel="self" type="application/rss+xml"/>
-    <item>
-      <title>A new chapter: joining Qonto</title>
-      <link>https://okano.dev/blog/joining-qonto/</link>
-      <guid isPermaLink="true">https://okano.dev/blog/joining-qonto/</guid>
-      <pubDate>Sun, 16 Aug 2026 09:00:00 GMT</pubDate>
-      <description>After a run at Grammarly, I have joined Qonto&apos;s Wealth &amp; Market team as a Staff Software Engineer, working on the investment side of the product.</description>
-      <category>career</category>
-      <category>fintech</category>
-    </item>
-    <item>
-      <title>How this blog works</title>
-      <link>https://okano.dev/blog/how-this-blog-works/</link>
-      <guid isPermaLink="true">https://okano.dev/blog/how-this-blog-works/</guid>
-      <pubDate>Sat, 15 Aug 2026 09:00:00 GMT</pubDate>
-      <description>A colophon. Markdown in, static HTML out, one URL per language, and a CI job that refuses to let the generated output drift from the source.</description>
-      <category>meta</category>
-      <category>static-site</category>
-      <category>tooling</category>
-    </item>
+
   </channel>
 </rss>

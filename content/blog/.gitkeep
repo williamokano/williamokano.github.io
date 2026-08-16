@@ -1,0 +1,7 @@
+# Blog posts live here, one directory per post:
+#
+#   content/blog/my-post/en.md      (required fields: title, summary, date)
+#   content/blog/my-post/pt-BR.md   (optional)
+#   content/blog/my-post/de.md      (optional)
+#
+# Then run `npm run build`. See readme.md for the full workflow.

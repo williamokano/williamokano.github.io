@@ -24,26 +24,4 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://okano.dev/blog/pt-BR/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://okano.dev/blog/de/"/>
   </url>
-  <url>
-    <loc>https://okano.dev/blog/joining-qonto/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/blog/joining-qonto/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://okano.dev/blog/pt-BR/joining-qonto/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://okano.dev/blog/de/joining-qonto/"/>
-  </url>
-  <url>
-    <loc>https://okano.dev/blog/pt-BR/joining-qonto/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/blog/joining-qonto/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://okano.dev/blog/pt-BR/joining-qonto/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://okano.dev/blog/de/joining-qonto/"/>
-  </url>
-  <url>
-    <loc>https://okano.dev/blog/de/joining-qonto/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/blog/joining-qonto/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://okano.dev/blog/pt-BR/joining-qonto/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://okano.dev/blog/de/joining-qonto/"/>
-  </url>
-  <url>
-    <loc>https://okano.dev/blog/how-this-blog-works/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/blog/how-this-blog-works/"/>
-  </url>
 </urlset>

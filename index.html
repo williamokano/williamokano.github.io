@@ -175,7 +175,8 @@
         <p class="hero-subtitle reveal reveal-delay-2" data-i18n="hero.subtitle">I build reliable backend systems and help engineering teams ship with confidence. Fifteen years in, I still believe the best code is the code that's easy for the next person to read.</p>
         <div class="hero-cta reveal reveal-delay-3">
           <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_projects">View Projects</a>
-          <a href="blog/" class="btn btn-outline" data-blog-link data-i18n="hero.cta_blog">Read the Blog</a>
+          <!-- Revealed by posts.js once the blog has at least one post. -->
+          <a href="blog/" class="btn btn-outline" data-blog-link data-blog-cta hidden data-i18n="hero.cta_blog">Read the Blog</a>
           <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta_contact">Get in Touch</a>
         </div>
         <dl class="hero-stats reveal reveal-delay-4">
@@ -537,8 +538,9 @@
           <h2 data-i18n="writing.title">Writing</h2>
           <p class="section-subtitle" data-i18n="writing.subtitle">Honest notes from someone who has been doing this long enough to have made most of the mistakes already</p>
         </div>
-        <!-- Own blog: rendered from blog/posts.json in the active language -->
-        <div class="writing-group">
+        <!-- Own blog: rendered from blog/posts.json in the active language.
+             Hidden until there is at least one post to show. -->
+        <div class="writing-group" hidden>
           <div class="writing-group-header reveal">
             <h3 data-i18n="writing.from_blog">From the blog</h3>
             <a class="writing-group-link" href="blog/" data-blog-link>

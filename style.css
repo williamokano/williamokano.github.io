@@ -1101,6 +1101,11 @@
    Layer: Utilities
    ========================================================================== */
 @layer utilities {
+  /* Component display rules would otherwise out-rank the UA sheet's [hidden]. */
+  [hidden] {
+    display: none !important;
+  }
+
   .sr-only {
     position: absolute;
     width: 1px;

@@ -45,6 +45,16 @@ for (const l of ["pt-BR","de"]) {
 
 ## Blog
 
+### No posts yet
+
+`content/blog/` is empty, so the blog is in its empty state: the home page hides
+the "From the blog" group and the hero's blog button entirely, and `/blog/`
+itself says "No posts yet" in the reader's language. Feeds, `posts.json`, and
+the sitemap are still generated and valid.
+
+Both surfaces appear on their own the moment the first post is built — nothing
+to switch on.
+
 ### Writing a post
 
 One directory per post, one Markdown file per language it exists in:

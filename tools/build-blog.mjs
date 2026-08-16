@@ -383,7 +383,10 @@ function renderPostCard(post, lang, dict) {
 function renderListingPage(lang, dict, posts) {
   const cards = posts.length
     ? posts.map((post) => renderPostCard(post, lang, dict)).join('\n')
-    : `        <p class="writing-empty">${escapeHtml(t(dict, 'blog.empty'))}</p>`;
+    : `        <div class="blog-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><polyline points="14 4 14 10 20 10"/></svg>
+          <p>${escapeHtml(t(dict, 'blog.empty'))}</p>
+        </div>`;
 
   const main = `  <main id="main-content" class="blog-page">
     <div class="container">
