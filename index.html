@@ -191,8 +191,8 @@
             <dd class="stat-label" data-i18n="stats.industries_label">Industries, from payments to AI</dd>
           </div>
           <div class="stat">
-            <dt class="stat-value" data-i18n="stats.repos_value">81</dt>
-            <dd class="stat-label" data-i18n="stats.repos_label">Public repositories</dd>
+            <dt class="stat-value" data-i18n="stats.languages_value">3</dt>
+            <dd class="stat-label" data-i18n="stats.languages_label">Languages I work in — EN, PT, DE</dd>
           </div>
         </dl>
       </div>
@@ -284,7 +284,11 @@
       <div class="container">
         <div class="section-header reveal">
           <h2 data-i18n="projects.title">Featured Projects</h2>
-          <p class="section-subtitle"><span data-i18n="projects.subtitle_prefix">A selection from</span> <a href="https://github.com/williamokano" target="_blank" rel="noopener" style="color: var(--accent);" data-i18n="projects.subtitle_link">81 public repositories</a></p>
+          <p class="section-subtitle">
+            <span data-i18n="projects.subtitle">A few things worth showing</span>
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/williamokano" target="_blank" rel="noopener" style="color: var(--accent);" data-i18n="projects.github_link">More on GitHub</a>
+          </p>
         </div>
         <div class="projects-grid stagger">
           <div class="project-card glass-card reveal">
@@ -304,15 +308,31 @@
           </div>
 
           <div class="project-card glass-card reveal">
-            <h3 class="project-card-header" data-i18n="projects.lox_title">Lox Language Interpreter</h3>
-            <p class="project-card-description" data-i18n="projects.lox_desc">A from-scratch implementation of the Lox programming language following Robert Nystrom's Crafting Interpreters. Covers lexical analysis, parsing, AST evaluation, and runtime execution.</p>
+            <h3 class="project-card-header" data-i18n="projects.statusline_title">Status Line for Claude Code</h3>
+            <p class="project-card-description" data-i18n="projects.statusline_desc">A Go status line for Claude Code that keeps the session's real state in view — rate-limit windows, context usage, token counts, and cache hit rate — instead of finding out when something stops working.</p>
             <div class="project-card-tags">
-              <span class="tag" data-i18n="tags.java">Java</span>
-              <span class="tag" data-i18n="tags.interpreters">Interpreters</span>
-              <span class="tag" data-i18n="tags.language_design">Language Design</span>
+              <span class="tag" data-i18n="tags.go">Go</span>
+              <span class="tag" data-i18n="tags.cli">CLI</span>
+              <span class="tag" data-i18n="tags.developer_tooling">Developer Tooling</span>
             </div>
             <div class="project-card-links">
-              <a href="https://github.com/williamokano/lox-java-interpreter" target="_blank" rel="noopener">
+              <a href="https://github.com/williamokano/claude-status-line-go" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span data-i18n="projects.source_code">Source Code</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card glass-card reveal">
+            <h3 class="project-card-header" data-i18n="projects.entitlements_title">Entitlements Service</h3>
+            <p class="project-card-description" data-i18n="projects.entitlements_desc">A worked example of entitlements as data: who is allowed to do what, resolved in one place instead of scattered across if-statements. The quiet layer under every subscription, plan, and permission check.</p>
+            <div class="project-card-tags">
+              <span class="tag" data-i18n="tags.typescript">TypeScript</span>
+              <span class="tag" data-i18n="tags.authorization">Authorization</span>
+              <span class="tag" data-i18n="tags.rest_apis">REST APIs</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://github.com/williamokano/entitlements" target="_blank" rel="noopener">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                 <span data-i18n="projects.source_code">Source Code</span>
               </a>
@@ -330,23 +350,6 @@
             </div>
             <div class="project-card-links">
               <a href="https://github.com/williamokano/go-websocket-chat" target="_blank" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                <span data-i18n="projects.source_code">Source Code</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="project-card glass-card reveal">
-            <h3 class="project-card-header" data-i18n="projects.smartcontract_title">Smart Contract Development & Testing</h3>
-            <p class="project-card-description" data-i18n="projects.smartcontract_desc">A development environment for writing, deploying, and testing Solidity smart contracts on Ethereum. Includes a full test suite built with Mocha and Chai, applying backend engineering rigor to blockchain development.</p>
-            <div class="project-card-tags">
-              <span class="tag" data-i18n="tags.solidity">Solidity</span>
-              <span class="tag" data-i18n="tags.javascript">JavaScript</span>
-              <span class="tag" data-i18n="tags.ethereum">Ethereum</span>
-              <span class="tag" data-i18n="tags.mocha">Mocha</span>
-            </div>
-            <div class="project-card-links">
-              <a href="https://github.com/williamokano/smart-contract-dev-and-testing" target="_blank" rel="noopener">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                 <span data-i18n="projects.source_code">Source Code</span>
               </a>
