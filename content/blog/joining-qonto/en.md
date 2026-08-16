@@ -5,7 +5,7 @@ date: 2026-08-16
 tags: [career, fintech]
 ---
 
-My last day at Grammarly was 30 June 2026. On 20 July I started at [Qonto](https://qonto.com) as a Staff Software Engineer on **Wealth & Market** — the team behind the investment side of the product. Nineteen days between the two, which was exactly as much time off as I needed to stop thinking about the last codebase.
+I left Grammarly at the end of June 2026. In July I started at [Qonto](https://qonto.com) as a Staff Software Engineer on **Wealth & Market** — the team behind the investment side of the product. There were a couple of weeks off in between, which was exactly as much time as I needed to stop thinking about the last codebase.
 
 ## Why this, and why now
 

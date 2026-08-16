@@ -5,7 +5,7 @@ date: 2026-08-16
 tags: [carreira, fintech]
 ---
 
-Meu último dia na Grammarly foi 30 de junho de 2026. No dia 20 de julho comecei na [Qonto](https://qonto.com) como Staff Software Engineer no time **Wealth & Market** — o time por trás da parte de investimentos do produto. Dezenove dias entre um e outro, exatamente o tempo de folga que eu precisava para parar de pensar na base de código anterior.
+Saí da Grammarly no fim de junho de 2026. Em julho comecei na [Qonto](https://qonto.com) como Staff Software Engineer no time **Wealth & Market** — o time por trás da parte de investimentos do produto. Foram algumas semanas de folga entre um e outro, exatamente o tempo que eu precisava para parar de pensar na base de código anterior.
 
 ## Por que isso, e por que agora
 
