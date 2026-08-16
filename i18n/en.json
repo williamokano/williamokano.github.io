@@ -88,7 +88,7 @@
     "grammarly_company": "Grammarly (now Superhuman)",
     "grammarly_location": "Berlin, Germany",
     "grammarly_dates": "until Jun 2026",
-    "grammarly_desc": "Worked at the intersection of AI and productivity tooling, building reliable backend systems for products that served millions of users daily.",
+    "grammarly_desc": "Led the Adyen implementation and maintained the payments and billing services, along with the AI flow. Built the anti-fraud service from the ground up, integrating three fraud-detection providers behind a single decision path — for a product serving millions of users daily.",
     "dh_role": "Senior Software Engineer",
     "dh_company": "Delivery Hero",
     "dh_location": "Berlin, Germany",
