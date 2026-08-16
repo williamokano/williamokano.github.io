@@ -1,0 +1,83 @@
+{
+  "generator": "tools/build-blog.mjs",
+  "languages": [
+    "en",
+    "pt-BR",
+    "de"
+  ],
+  "defaultLanguage": "en",
+  "posts": [
+    {
+      "slug": "joining-qonto",
+      "date": "2026-08-16",
+      "tags": [
+        "career",
+        "fintech"
+      ],
+      "primaryLanguage": "en",
+      "languages": [
+        "en",
+        "pt-BR",
+        "de"
+      ],
+      "translations": {
+        "en": {
+          "title": "A new chapter: joining Qonto",
+          "summary": "After a run at Grammarly, I am joining Qonto's Wealth & Market team as a Staff Software Engineer, working on the investment side of the product.",
+          "url": "/blog/joining-qonto/",
+          "readingMinutes": 2,
+          "tags": [
+            "career",
+            "fintech"
+          ]
+        },
+        "pt-BR": {
+          "title": "Novo capítulo: entrando na Qonto",
+          "summary": "Depois de um período na Grammarly, entro no time Wealth & Market da Qonto como Staff Software Engineer, trabalhando na parte de investimentos do produto.",
+          "url": "/blog/pt-BR/joining-qonto/",
+          "readingMinutes": 2,
+          "tags": [
+            "carreira",
+            "fintech"
+          ]
+        },
+        "de": {
+          "title": "Ein neues Kapitel: Start bei Qonto",
+          "summary": "Nach meiner Zeit bei Grammarly starte ich bei Qonto im Team Wealth & Market als Staff Software Engineer und arbeite am Investment-Teil des Produkts.",
+          "url": "/blog/de/joining-qonto/",
+          "readingMinutes": 2,
+          "tags": [
+            "karriere",
+            "fintech"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "how-this-blog-works",
+      "date": "2026-08-15",
+      "tags": [
+        "meta",
+        "static-site",
+        "tooling"
+      ],
+      "primaryLanguage": "en",
+      "languages": [
+        "en"
+      ],
+      "translations": {
+        "en": {
+          "title": "How this blog works",
+          "summary": "A colophon. Markdown in, static HTML out, one URL per language, and a CI job that refuses to let the generated output drift from the source.",
+          "url": "/blog/how-this-blog-works/",
+          "readingMinutes": 2,
+          "tags": [
+            "meta",
+            "static-site",
+            "tooling"
+          ]
+        }
+      }
+    }
+  ]
+}

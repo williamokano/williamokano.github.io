@@ -1,0 +1,22 @@
+name: Build
+
+# GitHub Pages serves this repository as-is, so the generated blog is committed.
+# This job rebuilds it from the Markdown source and fails if the committed output
+# has drifted — the usual "edited the post, forgot to rebuild" mistake.
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  check-generated-output:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify the generated blog matches the source
+        run: npm run check

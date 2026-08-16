@@ -1,24 +1,51 @@
 {
   "nav": {
     "about": "Über mich",
+    "approach": "Arbeitsweise",
     "skills": "Skills",
     "projects": "Projekte",
     "experience": "Erfahrung",
     "writing": "Artikel",
     "beyond": "Abseits des Codes",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "blog": "Blog"
   },
   "hero": {
     "greeting": "// Hi, ich bin",
     "subtitle": "Ich baue zuverlässige Backend-Systeme und helfe Engineering-Teams dabei, mit Vertrauen zu liefern. Nach fünfzehn Jahren bin ich immer noch überzeugt: Der beste Code ist der, den die nächste Person mühelos lesen kann.",
     "cta_projects": "Projekte ansehen",
-    "cta_contact": "Kontakt aufnehmen"
+    "cta_contact": "Kontakt aufnehmen",
+    "cta_blog": "Zum Blog",
+    "now_label": "Aktuell",
+    "now_value": "Staff Software Engineer bei Qonto — Wealth & Market"
+  },
+  "stats": {
+    "years_value": "15+",
+    "years_label": "Jahre Software im Einsatz",
+    "countries_value": "3",
+    "countries_label": "Länder gelebt und gearbeitet",
+    "industries_value": "4",
+    "industries_label": "Branchen, von Payments bis KI",
+    "repos_value": "81",
+    "repos_label": "Öffentliche Repositories"
   },
   "about": {
     "title": "Über mich",
     "p1": "Ich bin in Brasilien aufgewachsen, habe Informationssysteme an der Universidade Federal de Uberlândia studiert und angefangen, professionell Code zu schreiben, bevor ich in Deutschland ein Auto hätte mieten dürfen. Das ist über fünfzehn Jahre her. Seitdem habe ich in den Bereichen Fintech, Food Delivery und Produktivitätstools gearbeitet — an Systemen, die Millionen von Nutzern bedienen, und an der Seite der Engineers, die sie betreuen.",
-    "p2": "Mein Weg führte mich von Brasilien nach Berlin, wo ich in den letzten Jahren bei Unternehmen wie N26 Bank, Delivery Hero und Grammarly gearbeitet habe. An jeder Station war das Muster dasselbe: Ich gehe die schwierigen Backend-Probleme an, setze mich für saubere und wartbare Lösungen ein und sorge dafür, dass die Menschen um mich herum alles haben, was sie brauchen, um ihre beste Arbeit zu leisten.",
+    "p2": "Mein Weg führte mich von Brasilien nach Berlin — über N26 Bank, Delivery Hero und Grammarly. Heute bin ich Staff Software Engineer bei Qonto, im Team Wealth & Market, das hinter dem Investment-Teil des Produkts steht. An jeder Station war das Muster dasselbe: Ich gehe die schwierigen Backend-Probleme an, setze mich für saubere und wartbare Lösungen ein und sorge dafür, dass die Menschen um mich herum alles haben, was sie brauchen, um ihre beste Arbeit zu leisten.",
     "p3": "Ich bin im Kern ein Backend-Engineer — Go, Kotlin, JVM, verteilte Systeme — aber ich bewege mich problemlos über den Stack hinweg, wenn das Problem es erfordert. Was mir wichtig ist, ist nicht die Sprache oder das Framework. Sondern ob wir etwas bauen, das gut funktioniert, gut lesbar ist und auch in sechs Monaten noch Sinn ergibt, wenn jemand anderes den Pull Request öffnet."
+  },
+  "approach": {
+    "title": "Arbeitsweise",
+    "subtitle": "Was der Staff-Teil der Arbeit tatsächlich bedeutet — aus meiner Erfahrung",
+    "constraint_title": "Mit der Einschränkung anfangen",
+    "constraint_desc": "Die meisten Architekturdebatten lösen sich in dem Moment auf, in dem die echte Einschränkung auf dem Tisch liegt — ein Latenzbudget, eine regulatorische Frist, die Größe des Teams, das es warten muss. Ich schreibe die Einschränkung zuerst auf und lasse sie das Design wählen.",
+    "boring_title": "Langweilig, wo es zählt",
+    "boring_desc": "Neues gehört in die Teile eines Systems, die man wegwerfen kann. Alles, was Geld, Kundendaten oder den kritischen Pfad berührt, bekommt die langweiligste, am besten verstandene Option — und einen Test, der es beweist.",
+    "multiply_title": "Multiplizieren statt Flaschenhals sein",
+    "multiply_desc": "Ein Design taugt nur dann etwas, wenn das Team es ohne mich im Raum weiterentwickeln kann. Das heißt: Entscheidungen schriftlich festhalten, Reviews, die erklären statt blockieren, und die wirklich spannenden Probleme abgeben.",
+    "own_title": "Verantwortung endet nicht beim Merge",
+    "own_desc": "Ausliefern ist die Mitte der Arbeit, nicht das Ende. Ich bleibe durch Rollout, Dashboards und den ersten Incident dabei — dort bekommt ein Design sein ehrliches Review."
   },
   "skills": {
     "title": "Skills & Technologien",
@@ -50,10 +77,18 @@
   "experience": {
     "title": "Erfahrung",
     "subtitle": "15 Jahre Softwareentwicklung in drei Ländern und vier Branchen",
+    "current_badge": "Aktuell",
+    "qonto_role": "Staff Software Engineer",
+    "qonto_company": "Qonto",
+    "qonto_team": "Wealth & Market",
+    "qonto_location": "Berlin, Deutschland",
+    "qonto_dates": "Aug 2026 — heute",
+    "qonto_desc": "Staff Engineer im Team Wealth & Market, das hinter den Investmentprodukten von Qonto steht. Ich helfe europäischen Unternehmen, ungenutzte Liquidität arbeiten zu lassen — eine Domäne, in der Korrektheit, Regulierung und Kundenvertrauen alle auf demselben Codepfad landen.",
     "grammarly_role": "Software Engineer",
     "grammarly_company": "Grammarly (jetzt Superhuman)",
     "grammarly_location": "Berlin, Deutschland",
-    "grammarly_desc": "Arbeite an der Schnittstelle von KI und Produktivitätstools. Baue zuverlässige Backend-Systeme für Produkte, die täglich Millionen von Nutzern bedienen.",
+    "grammarly_dates": "bis Jun 2026",
+    "grammarly_desc": "An der Schnittstelle von KI und Produktivitätstools gearbeitet und zuverlässige Backend-Systeme für Produkte gebaut, die täglich Millionen von Nutzern bedient haben.",
     "dh_role": "Senior Software Engineer",
     "dh_company": "Delivery Hero",
     "dh_location": "Berlin, Deutschland",
@@ -87,7 +122,27 @@
     "kotlin_title": "Extension Functions in Kotlin",
     "kotlin_desc": "Erkundet eines der mächtigsten Kotlin-Features für ausdrucksstarken Code. Zeigt, wie Extension Functions es ermöglichen, bestehendes Verhalten zu erweitern — ohne Vererbung und ohne Wrapper-Patterns.",
     "read_on_medium": "Auf Medium lesen",
-    "source_zup": "Zup IT Engineering Blog"
+    "source_zup": "Zup IT Engineering Blog",
+    "from_blog": "Aus dem Blog",
+    "all_posts": "Alle Beiträge",
+    "elsewhere": "Anderswo veröffentlicht"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Notizen zu Backend-Systemen, den Teams dahinter und gelegentlichen Abstechern",
+    "back_to_blog": "Alle Beiträge",
+    "back_home": "Zurück zu okano.dev",
+    "read_post": "Beitrag lesen",
+    "reading_time": "{min} Min. Lesezeit",
+    "tags": "Tags",
+    "empty": "Noch keine Beiträge. Der erste ist unterwegs.",
+    "rss": "RSS",
+    "translations": "Auch verfügbar auf",
+    "only_in_this_language": "Dieser Beitrag ist nur auf Deutsch verfügbar.",
+    "not_translated_badge": "nur DE",
+    "language_note": "Geschrieben auf",
+    "newer": "Neuer",
+    "older": "Älter"
   },
   "beyond": {
     "title": "Abseits des Codes",
@@ -154,7 +209,7 @@
     "rpc": "RPC"
   },
   "meta": {
-    "title": "William Okano — Software Engineer",
-    "description": "Software Engineer in Berlin mit über 15 Jahren Erfahrung im Aufbau zuverlässiger Backend-Systeme in Fintech, Logistik und KI/Produktivität."
+    "title": "William Okano — Staff Software Engineer",
+    "description": "Staff Software Engineer bei Qonto (Wealth & Market) in Berlin. Über 15 Jahre Erfahrung im Aufbau zuverlässiger Backend-Systeme in Fintech, Logistik und KI/Produktivität."
   }
 }

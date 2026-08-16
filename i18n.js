@@ -23,6 +23,13 @@ const LANG_NAMES = {
   'de': 'Deutsch',
 };
 
+// Open Graph wants full locale identifiers, not the short codes we use in URLs.
+const OG_LOCALES = {
+  'en': 'en_US',
+  'pt-BR': 'pt_BR',
+  'de': 'de_DE',
+};
+
 // Cache for loaded translations
 const translationCache = {};
 
@@ -55,6 +62,18 @@ function detectBrowserLang() {
  * Priority: localStorage > browser detect > default
  */
 function resolveLanguage() {
+  // ?lang=de wins once and is remembered — it is how the blog pages hand the
+  // reader's language back to the home page.
+  const requested = new URLSearchParams(window.location.search).get('lang');
+  if (requested && SUPPORTED_LANGS.includes(requested)) {
+    try {
+      localStorage.setItem(I18N_STORAGE_KEY, requested);
+    } catch {
+      /* Storage unavailable — the language still applies for this page view. */
+    }
+    return requested;
+  }
+
   const stored = localStorage.getItem(I18N_STORAGE_KEY);
   if (stored && SUPPORTED_LANGS.includes(stored)) {
     return stored;
@@ -99,7 +118,7 @@ function getNestedValue(obj, keyPath) {
 /**
  * Apply translations to all elements with data-i18n attributes.
  */
-function applyTranslations(translations) {
+function applyTranslations(translations, lang) {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     // Skip hero subtitle — handled by typing effect below
@@ -152,6 +171,20 @@ function applyTranslations(translations) {
     document.querySelector('meta[property="og:description"]')?.setAttribute('content', metaDesc);
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', metaDesc);
   }
+
+  if (lang) {
+    // Keep the social locale and the RSS link pointing at the language on screen.
+    document.querySelector('meta[property="og:locale"]')?.setAttribute('content', OG_LOCALES[lang] ?? lang);
+    document.querySelector('[data-feed-link]')?.setAttribute('href', `blog/feed.${lang}.xml`);
+
+    // Blog links point at the listing generated for this language.
+    const blogHref = lang === DEFAULT_LANG ? 'blog/' : `blog/${lang}/`;
+    document.querySelectorAll('[data-blog-link]').forEach((el) => {
+      el.setAttribute('href', blogHref);
+    });
+
+    window.renderLatestPosts?.(lang, translations);
+  }
 }
 
 /**
@@ -175,9 +208,14 @@ function updatePicker(activeLang) {
 async function switchLanguage(lang) {
   if (!SUPPORTED_LANGS.includes(lang)) return;
 
-  localStorage.setItem(I18N_STORAGE_KEY, lang);
+  try {
+    localStorage.setItem(I18N_STORAGE_KEY, lang);
+  } catch {
+    /* Storage unavailable — the switch still applies to this page view. */
+  }
+
   const translations = await loadTranslation(lang);
-  applyTranslations(translations);
+  applyTranslations(translations, lang);
   updatePicker(lang);
 }
 
@@ -233,7 +271,7 @@ async function initI18n() {
 
   const lang = resolveLanguage();
   const translations = await loadTranslation(lang);
-  applyTranslations(translations);
+  applyTranslations(translations, lang);
   updatePicker(lang);
 }
 

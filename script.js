@@ -70,16 +70,12 @@ function getFocusableElements(container) {
 // 1. Scroll Reveal System
 // ---------------------------------------------------------------------------
 
-function initScrollReveal() {
-  const elements = dom.revealEls();
-  if (!elements.length) return;
+let _revealObserver = null;
 
-  if (prefersReducedMotion()) {
-    elements.forEach((el) => el.classList.add('is-visible'));
-    return;
-  }
+function getRevealObserver() {
+  if (_revealObserver) return _revealObserver;
 
-  const observer = new IntersectionObserver(
+  _revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
@@ -95,7 +91,7 @@ function initScrollReveal() {
         }
 
         el.classList.add('is-visible');
-        observer.unobserve(el);
+        _revealObserver.unobserve(el);
       });
     },
     {
@@ -104,7 +100,31 @@ function initScrollReveal() {
     }
   );
 
-  elements.forEach((el) => observer.observe(el));
+  return _revealObserver;
+}
+
+/**
+ * Reveal elements added to the DOM after init (blog cards, for example).
+ * Exposed so other modules do not have to know how reveals work.
+ */
+window.observeReveals = function (elements) {
+  const list = [...elements];
+  if (!list.length) return;
+
+  if (prefersReducedMotion()) {
+    list.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = getRevealObserver();
+  list.forEach((el) => observer.observe(el));
+};
+
+function initScrollReveal() {
+  const elements = dom.revealEls();
+  if (!elements.length) return;
+
+  window.observeReveals(elements);
 }
 
 // ---------------------------------------------------------------------------

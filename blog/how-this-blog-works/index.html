@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How this blog works — William Okano</title>
+  <meta name="description" content="A colophon. Markdown in, static HTML out, one URL per language, and a CI job that refuses to let the generated output drift from the source.">
+  <meta name="author" content="William Okano">
+  <link rel="canonical" href="https://okano.dev/blog/how-this-blog-works/">
+  <link rel="alternate" hreflang="en" href="https://okano.dev/blog/how-this-blog-works/">
+  <link rel="alternate" hreflang="x-default" href="https://okano.dev/blog/how-this-blog-works/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://okano.dev/blog/how-this-blog-works/">
+  <meta property="og:title" content="How this blog works — William Okano">
+  <meta property="og:description" content="A colophon. Markdown in, static HTML out, one URL per language, and a CI job that refuses to let the generated output drift from the source.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:image" content="https://okano.dev/og-image.png">
+  <meta property="og:site_name" content="William Okano">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How this blog works — William Okano">
+  <meta name="twitter:description" content="A colophon. Markdown in, static HTML out, one URL per language, and a CI job that refuses to let the generated output drift from the source.">
+  <meta name="twitter:image" content="https://okano.dev/og-image.png">
+
+  <link rel="alternate" type="application/rss+xml" title="William Okano — Blog (English)" href="/blog/feed.en.xml">
+
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/blog.css">
+
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (err) {
+        /* Storage unavailable — fall back to the CSS defaults. */
+      }
+    })();
+  </script>
+  <meta property="article:published_time" content="2026-08-15">
+  <meta property="article:tag" content="meta">
+  <meta property="article:tag" content="static-site">
+  <meta property="article:tag" content="tooling">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How this blog works",
+  "description": "A colophon. Markdown in, static HTML out, one URL per language, and a CI job that refuses to let the generated output drift from the source.",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
+  "inLanguage": "en",
+  "keywords": "meta, static-site, tooling",
+  "author": {
+    "@type": "Person",
+    "name": "William Okano",
+    "url": "https://okano.dev"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "William Okano",
+    "url": "https://okano.dev"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://okano.dev/blog/how-this-blog-works/"
+  }
+}
+  </script>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="/?lang=en" class="nav-logo" aria-label="William Okano">w<span>.</span>okano</a>
+
+      <div class="nav-links">
+        <a href="/?lang=en#about">About</a>
+        <a href="/?lang=en#approach">How I Work</a>
+        <a href="/?lang=en#projects">Projects</a>
+        <a href="/?lang=en#experience">Experience</a>
+        <a href="/?lang=en#contact">Contact</a>
+        <a href="/blog/" class="active" aria-current="page">Blog</a>
+      </div>
+
+      <div class="nav-actions">
+        <div class="lang-picker" role="group" aria-label="Language selection"><a class="lang-option active" href="/blog/how-this-blog-works/" hreflang="en" lang="en" data-lang="en" aria-label="English" aria-current="true">EN</a><a class="lang-option" href="/blog/pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR" aria-label="Português" aria-current="false">PT</a><a class="lang-option" href="/blog/de/" hreflang="de" lang="de" data-lang="de" aria-label="Deutsch" aria-current="false">DE</a></div>
+        <button class="theme-toggle" aria-label="Switch to light mode"
+                data-aria-light="Switch to light mode"
+                data-aria-dark="Switch to dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="nav-mobile" aria-label="Mobile navigation">
+        <a href="/?lang=en#about">About</a>
+        <a href="/?lang=en#approach">How I Work</a>
+        <a href="/?lang=en#projects">Projects</a>
+        <a href="/?lang=en#experience">Experience</a>
+        <a href="/?lang=en#contact">Contact</a>
+        <a href="/blog/" class="active" aria-current="page">Blog</a>
+        <div class="lang-picker" role="group" aria-label="Language selection"><a class="lang-option active" href="/blog/how-this-blog-works/" hreflang="en" lang="en" data-lang="en" aria-label="English" aria-current="true">EN</a><a class="lang-option" href="/blog/pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR" aria-label="Português" aria-current="false">PT</a><a class="lang-option" href="/blog/de/" hreflang="de" lang="de" data-lang="de" aria-label="Deutsch" aria-current="false">DE</a></div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="blog-page">
+    <div class="container post-container">
+      <p class="blog-eyebrow"><a href="/blog/">&#8592; All posts</a></p>
+
+      <article class="post">
+        <header class="post-header">
+          <h1>How this blog works</h1>
+          <p class="post-meta">
+            <time datetime="2026-08-15">August 15, 2026</time>
+            <span aria-hidden="true">·</span>
+            <span>2 min read</span>
+          </p>
+          <div class="article-card-tags"><span class="tag">meta</span><span class="tag">static-site</span><span class="tag">tooling</span></div>
+          <p class="post-summary">A colophon. Markdown in, static HTML out, one URL per language, and a CI job that refuses to let the generated output drift from the source.</p>
+          <p class="post-translations post-translations--single">This post is only available in English.</p>
+        </header>
+
+        <div class="prose">
+<p>This site has no framework, no bundler, and no <code>node_modules</code> to audit. It is HTML, CSS, and a few hundred lines of vanilla JavaScript, served by GitHub Pages. When I added a blog I wanted to keep that property, so the blog is a small build step rather than a dependency tree.</p>
+<h2 id="the-shape-of-it">The shape of it<a class="heading-anchor" href="#the-shape-of-it" aria-label="Link to this section">#</a></h2>
+<p>Posts live as Markdown, one directory per post and one file per language:</p>
+<pre><code>content/blog/
+  joining-qonto/
+    en.md
+    pt-BR.md
+    de.md
+  how-this-blog-works/
+    en.md
+</code></pre>
+<p><code>node tools/build-blog.mjs</code> reads that tree and writes real pages:</p>
+<div class="table-scroll"><table><thead><tr><th>Generated</th><th>What it is</th></tr></thead><tbody><tr><td><code>blog/index.html</code></td><td>the English listing</td></tr><tr><td><code>blog/de/index.html</code></td><td>the German listing</td></tr><tr><td><code>blog/joining-qonto/</code></td><td>the English post</td></tr><tr><td><code>blog/de/joining-qonto/</code></td><td>the German post</td></tr><tr><td><code>blog/feed.&lt;lang&gt;.xml</code></td><td>one RSS feed per language</td></tr><tr><td><code>blog/posts.json</code></td><td>the index the home page reads</td></tr><tr><td><code>sitemap.xml</code></td><td>every URL, with <code>hreflang</code> alternates</td></tr></tbody></table></div>
+<p>The rest of the site translates itself in the browser, which is fine for a single page someone has already found. Posts are different: they need to be findable. A crawler that runs no JavaScript still has to see the title, the description, and the language — so those are compiled in, not swapped in at runtime.</p>
+<h2 id="not-every-post-exists-in-every-language">Not every post exists in every language<a class="heading-anchor" href="#not-every-post-exists-in-every-language" aria-label="Link to this section">#</a></h2>
+<p>This one only exists in English, and that is the interesting case. Each post declares which languages it was written in simply by which files exist. When you are reading in German and a post has no German version, you get the original with a small badge instead of a broken link or a machine translation I did not write.</p>
+<p>The <code>hreflang</code> alternates only list the languages a post actually has, so search engines never advertise a page that is not there.</p>
+<h2 id="keeping-the-output-honest">Keeping the output honest<a class="heading-anchor" href="#keeping-the-output-honest" aria-label="Link to this section">#</a></h2>
+<p>Generated files are committed — GitHub Pages serves the repository as-is, so they have to be. That creates the usual failure mode: someone edits Markdown, forgets to rebuild, and the published page quietly disagrees with the source.</p>
+<p>So the build has a second mode:</p>
+<pre><code class="language-bash">node tools/build-blog.mjs --check
+</code></pre>
+<p>It builds into memory, compares against what is committed, and exits non-zero on any file that is missing, outdated, or orphaned. A GitHub Actions workflow runs it on every push. The check is three lines of CI and it removes an entire category of &quot;the website is wrong&quot; bugs.</p>
+<h2 id="the-markdown-renderer">The Markdown renderer<a class="heading-anchor" href="#the-markdown-renderer" aria-label="Link to this section">#</a></h2>
+<p>There is one, and it is deliberately small — headings, lists, code fences, tables, blockquotes, links, emphasis. Raw HTML in a post is escaped rather than passed through, because posts are content, not templates.</p>
+<p>Is it a full CommonMark implementation? No. Will it need a fix the first time I write something it does not handle? Almost certainly. That trade is fine: I would rather own eighty lines of parser I can debug than inherit a dependency chain I cannot.</p>
+<h2 id="writing-a-post">Writing a post<a class="heading-anchor" href="#writing-a-post" aria-label="Link to this section">#</a></h2>
+<p>Create the directory, write the front matter, run the build:</p>
+<pre><code class="language-bash">mkdir -p content/blog/my-post
+$EDITOR content/blog/my-post/en.md
+npm run build
+</code></pre>
+<p>Front matter is four fields — <code>title</code>, <code>summary</code>, <code>date</code>, <code>tags</code> — and the build fails loudly if any of the first three is missing. That is the whole workflow. Adding a translation later means dropping a <code>de.md</code> next to the <code>en.md</code> and rebuilding; every link, feed, and alternate updates itself.</p>
+        </div>
+      </article>
+
+      <nav class="post-pager" aria-label="All posts">
+        <a class="post-pager-link post-pager-link--newer" href="/blog/joining-qonto/" lang="en">
+          <span class="post-pager-label">Newer</span>
+          <span class="post-pager-title">A new chapter: joining Qonto</span>
+        </a>
+
+      </nav>
+
+      <p class="post-footer-cta">
+        <a class="btn btn-outline" href="/blog/">All posts</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-tagline">println(&quot;Let's build something worth maintaining.&quot;)</p>
+      <div class="footer-links">
+        <a href="/?lang=en">okano.dev</a>
+        <a href="/blog/">Blog</a>
+        <a href="/blog/feed.en.xml">RSS</a>
+        <a href="https://github.com/williamokano" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/williamokano" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+  <script src="/blog.js" defer></script>
+</body>
+</html>

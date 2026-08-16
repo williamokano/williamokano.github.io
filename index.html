@@ -5,29 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Primary Meta -->
-  <title>William Okano — Software Engineer</title>
-  <meta name="description" content="Software engineer based in Berlin with 15+ years of experience building reliable backend systems across fintech, logistics, and AI/productivity.">
+  <title>William Okano — Staff Software Engineer</title>
+  <meta name="description" content="Staff Software Engineer at Qonto (Wealth &amp; Market), based in Berlin. 15+ years building reliable backend systems across fintech, logistics, and AI/productivity.">
   <meta name="author" content="William Okano">
   <link rel="canonical" href="https://okano.dev/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://okano.dev/">
-  <meta property="og:title" content="William Okano — Software Engineer">
-  <meta property="og:description" content="Software engineer based in Berlin. 15+ years building reliable backend systems across fintech, logistics, and AI/productivity.">
+  <meta property="og:title" content="William Okano — Staff Software Engineer">
+  <meta property="og:description" content="Staff Software Engineer at Qonto (Wealth &amp; Market), based in Berlin. 15+ years building reliable backend systems across fintech, logistics, and AI/productivity.">
   <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="de_DE">
   <meta property="og:image" content="https://okano.dev/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="William Okano — Software Engineer">
+  <meta property="og:image:alt" content="William Okano — Staff Software Engineer">
   <meta property="og:site_name" content="William Okano">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="William Okano — Software Engineer">
-  <meta name="twitter:description" content="Software engineer based in Berlin. 15+ years building reliable backend systems.">
+  <meta name="twitter:title" content="William Okano — Staff Software Engineer">
+  <meta name="twitter:description" content="Staff Software Engineer at Qonto (Wealth &amp; Market), based in Berlin. 15+ years building reliable backend systems.">
   <meta name="twitter:image" content="https://okano.dev/og-image.png">
-  <meta name="twitter:image:alt" content="William Okano — Software Engineer">
+  <meta name="twitter:image:alt" content="William Okano — Staff Software Engineer">
+
+  <!-- Blog feeds -->
+  <link rel="alternate" type="application/rss+xml" hreflang="en" title="William Okano — Blog (English)" href="/blog/feed.en.xml">
+  <link rel="alternate" type="application/rss+xml" hreflang="pt-BR" title="William Okano — Blog (Português)" href="/blog/feed.pt-BR.xml">
+  <link rel="alternate" type="application/rss+xml" hreflang="de" title="William Okano — Blog (Deutsch)" href="/blog/feed.de.xml">
 
   <!-- Theme Color -->
   <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
@@ -41,6 +48,34 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 
+  <!--
+    Boot script: applies the stored theme and language before first paint so the
+    page never flashes the wrong colours or the wrong copy. Kept inline and tiny
+    on purpose — everything else is deferred.
+  -->
+  <script>
+    (function () {
+      var SUPPORTED = ['en', 'pt-BR', 'de'];
+      try {
+        var requested = new URLSearchParams(location.search).get('lang');
+        if (requested && SUPPORTED.indexOf(requested) !== -1) {
+          localStorage.setItem('lang', requested);
+        }
+        var lang = localStorage.getItem('lang');
+        if (SUPPORTED.indexOf(lang) !== -1) {
+          document.documentElement.setAttribute('lang', lang);
+        }
+        var theme = localStorage.getItem('theme');
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (err) {
+        /* Storage unavailable (private mode, blocked cookies) — fall back to CSS defaults. */
+      }
+    })();
+  </script>
+
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
@@ -48,9 +83,17 @@
     "@type": "Person",
     "name": "William Okano",
     "url": "https://okano.dev",
-    "jobTitle": "Software Engineer",
-    "worksFor": { "@type": "Organization", "name": "Grammarly" },
+    "jobTitle": "Staff Software Engineer",
+    "worksFor": { "@type": "Organization", "name": "Qonto", "url": "https://qonto.com" },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Staff Software Engineer",
+      "occupationLocation": { "@type": "City", "name": "Berlin" },
+      "skills": "Go, Kotlin, JVM, distributed systems, event-driven architecture, fintech infrastructure"
+    },
+    "homeLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" } },
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidade Federal de Uberlândia" },
+    "knowsLanguage": ["en", "pt-BR", "de"],
     "sameAs": [
       "https://github.com/williamokano",
       "https://linkedin.com/in/williamokano",
@@ -73,6 +116,7 @@
       <!-- Desktop Nav -->
       <div class="nav-links">
         <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#approach" data-i18n="nav.approach">How I Work</a>
         <a href="#skills" data-i18n="nav.skills">Skills</a>
         <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#experience" data-i18n="nav.experience">Experience</a>
@@ -101,12 +145,14 @@
       <!-- Mobile Menu -->
       <div class="nav-mobile" aria-label="Mobile navigation">
         <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#approach" data-i18n="nav.approach">How I Work</a>
         <a href="#skills" data-i18n="nav.skills">Skills</a>
         <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#experience" data-i18n="nav.experience">Experience</a>
         <a href="#writing" data-i18n="nav.writing">Writing</a>
         <a href="#beyond" data-i18n="nav.beyond">Beyond</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="blog/" data-blog-link data-i18n="nav.blog">Blog</a>
       </div>
     </nav>
   </header>
@@ -121,11 +167,35 @@
         <h1 class="hero-title reveal reveal-delay-1">
           <span class="gradient-text">William Okano</span>
         </h1>
+        <p class="now-chip reveal reveal-delay-1">
+          <span class="now-chip-dot" aria-hidden="true"></span>
+          <span class="now-chip-label" data-i18n="hero.now_label">Now</span>
+          <span class="now-chip-value" data-i18n="hero.now_value">Staff Software Engineer at Qonto — Wealth &amp; Market</span>
+        </p>
         <p class="hero-subtitle reveal reveal-delay-2" data-i18n="hero.subtitle">I build reliable backend systems and help engineering teams ship with confidence. Fifteen years in, I still believe the best code is the code that's easy for the next person to read.</p>
         <div class="hero-cta reveal reveal-delay-3">
           <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_projects">View Projects</a>
-          <a href="#contact" class="btn btn-outline" data-i18n="hero.cta_contact">Get in Touch</a>
+          <a href="blog/" class="btn btn-outline" data-blog-link data-i18n="hero.cta_blog">Read the Blog</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta_contact">Get in Touch</a>
         </div>
+        <dl class="hero-stats reveal reveal-delay-4">
+          <div class="stat">
+            <dt class="stat-value" data-i18n="stats.years_value">15+</dt>
+            <dd class="stat-label" data-i18n="stats.years_label">Years shipping software</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-value" data-i18n="stats.countries_value">3</dt>
+            <dd class="stat-label" data-i18n="stats.countries_label">Countries lived and worked in</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-value" data-i18n="stats.industries_value">4</dt>
+            <dd class="stat-label" data-i18n="stats.industries_label">Industries, from payments to AI</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-value" data-i18n="stats.repos_value">81</dt>
+            <dd class="stat-label" data-i18n="stats.repos_label">Public repositories</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -150,6 +220,38 @@
               loading="eager"
             >
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How I Work -->
+    <section id="approach" class="approach">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="approach.title">How I Work</h2>
+          <p class="section-subtitle" data-i18n="approach.subtitle">What the staff part of the job actually looks like, in my experience</p>
+        </div>
+        <div class="approach-grid stagger">
+          <article class="approach-card glass-card reveal">
+            <p class="approach-card-index" aria-hidden="true">01</p>
+            <h3 class="approach-card-title" data-i18n="approach.constraint_title">Start with the constraint</h3>
+            <p class="approach-card-description" data-i18n="approach.constraint_desc">Most architecture arguments dissolve the moment the real constraint is on the table — a latency budget, a regulatory deadline, the size of the team that has to maintain it. I write the constraint down first and let it choose the design.</p>
+          </article>
+          <article class="approach-card glass-card reveal">
+            <p class="approach-card-index" aria-hidden="true">02</p>
+            <h3 class="approach-card-title" data-i18n="approach.boring_title">Boring where it counts</h3>
+            <p class="approach-card-description" data-i18n="approach.boring_desc">Novelty belongs in the parts of a system you can afford to throw away. Anything touching money, customer data, or the critical path gets the dullest, best-understood option available — and a test that proves it.</p>
+          </article>
+          <article class="approach-card glass-card reveal">
+            <p class="approach-card-index" aria-hidden="true">03</p>
+            <h3 class="approach-card-title" data-i18n="approach.multiply_title">Multiply, don't bottleneck</h3>
+            <p class="approach-card-description" data-i18n="approach.multiply_desc">A design is only good if the team can extend it without me in the room. That means decisions written down, reviews that teach instead of gate, and handing the genuinely interesting problems to someone else.</p>
+          </article>
+          <article class="approach-card glass-card reveal">
+            <p class="approach-card-index" aria-hidden="true">04</p>
+            <h3 class="approach-card-title" data-i18n="approach.own_title">Own it past the merge</h3>
+            <p class="approach-card-description" data-i18n="approach.own_desc">Shipping is the middle of the job, not the end. I stay attached through rollout, dashboards, and the first incident — that is where a design gets its honest review.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -338,13 +440,36 @@
           <p class="section-subtitle" data-i18n="experience.subtitle">15 years building software across three countries and four industries</p>
         </div>
         <div class="timeline">
+          <div class="timeline-item timeline-item--current reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-heading">
+                <p class="timeline-role" data-i18n="experience.qonto_role">Staff Software Engineer</p>
+                <span class="timeline-badge" data-i18n="experience.current_badge">Current</span>
+              </div>
+              <p class="timeline-company">
+                <span data-i18n="experience.qonto_company">Qonto</span>
+                <span class="timeline-team" data-i18n="experience.qonto_team">Wealth &amp; Market</span>
+              </p>
+              <p class="timeline-period">
+                <span data-i18n="experience.qonto_location">Berlin, Germany</span>
+                <span class="timeline-dates" data-i18n="experience.qonto_dates">Aug 2026 — Present</span>
+              </p>
+              <p class="timeline-description" data-i18n="experience.qonto_desc">Staff engineer on Wealth &amp; Market, the team behind Qonto's investment products. Helping European businesses put their idle cash to work — a domain where correctness, regulation, and customer trust all land on the same code path.</p>
+            </div>
+          </div>
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <p class="timeline-role" data-i18n="experience.grammarly_role">Software Engineer</p>
+              <div class="timeline-heading">
+                <p class="timeline-role" data-i18n="experience.grammarly_role">Software Engineer</p>
+              </div>
               <p class="timeline-company" data-i18n="experience.grammarly_company">Grammarly (now Superhuman)</p>
-              <p class="timeline-period" data-i18n="experience.grammarly_location">Berlin, Germany</p>
-              <p class="timeline-description" data-i18n="experience.grammarly_desc">Working at the intersection of AI and productivity tooling. Building reliable backend systems for products that serve millions of users daily.</p>
+              <p class="timeline-period">
+                <span data-i18n="experience.grammarly_location">Berlin, Germany</span>
+                <span class="timeline-dates" data-i18n="experience.grammarly_dates">until Jun 2026</span>
+              </p>
+              <p class="timeline-description" data-i18n="experience.grammarly_desc">Worked at the intersection of AI and productivity tooling, building reliable backend systems for products that served millions of users daily.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
@@ -412,7 +537,23 @@
           <h2 data-i18n="writing.title">Writing</h2>
           <p class="section-subtitle" data-i18n="writing.subtitle">Honest notes from someone who has been doing this long enough to have made most of the mistakes already</p>
         </div>
-        <div class="articles-grid stagger">
+        <!-- Own blog: rendered from blog/posts.json in the active language -->
+        <div class="writing-group">
+          <div class="writing-group-header reveal">
+            <h3 data-i18n="writing.from_blog">From the blog</h3>
+            <a class="writing-group-link" href="blog/" data-blog-link>
+              <span data-i18n="writing.all_posts">All posts</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div class="articles-grid stagger" id="latest-posts" data-latest-posts></div>
+        </div>
+
+        <div class="writing-group">
+          <div class="writing-group-header reveal">
+            <h3 data-i18n="writing.elsewhere">Published elsewhere</h3>
+          </div>
+          <div class="articles-grid stagger">
           <div class="article-card glass-card reveal">
             <p class="article-card-source" data-i18n="writing.source_zup">Zup IT Engineering Blog</p>
             <h3 class="article-card-title" data-i18n="writing.php_title">PHP 7.4 Arrow Functions</h3>
@@ -430,6 +571,7 @@
               <span data-i18n="writing.read_on_medium">Read on Medium</span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
+          </div>
           </div>
         </div>
       </div>
@@ -523,15 +665,18 @@
     <div class="footer-content">
       <p class="footer-tagline" data-i18n="footer.tagline">println("Let's build something worth maintaining.")</p>
       <div class="footer-links">
+        <a href="blog/" data-blog-link data-i18n="nav.blog">Blog</a>
         <a href="https://github.com/williamokano" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/williamokano" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://medium.com/@williamokano" target="_blank" rel="noopener">Medium</a>
+        <a href="blog/feed.en.xml" data-feed-link>RSS</a>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="script.js" defer></script>
+  <script src="posts.js" defer></script>
   <script src="i18n.js" defer></script>
 </body>
 </html>

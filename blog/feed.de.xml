@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>William Okano — Blog (Deutsch)</title>
+    <link>https://okano.dev/blog/de/</link>
+    <description>Notizen zu Backend-Systemen, den Teams dahinter und gelegentlichen Abstechern</description>
+    <language>de</language>
+    <atom:link href="https://okano.dev/blog/feed.de.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Ein neues Kapitel: Start bei Qonto</title>
+      <link>https://okano.dev/blog/de/joining-qonto/</link>
+      <guid isPermaLink="true">https://okano.dev/blog/de/joining-qonto/</guid>
+      <pubDate>Sun, 16 Aug 2026 09:00:00 GMT</pubDate>
+      <description>Nach meiner Zeit bei Grammarly starte ich bei Qonto im Team Wealth &amp; Market als Staff Software Engineer und arbeite am Investment-Teil des Produkts.</description>
+      <category>karriere</category>
+      <category>fintech</category>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,16 @@
+{
+  "name": "okano-dev",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Source for okano.dev — a static personal site and multilingual blog with no runtime dependencies.",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build-blog.mjs",
+    "check": "node tools/build-blog.mjs --check",
+    "serve": "python3 -m http.server 8000"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Page not found — William Okano</title>
+  <meta name="description" content="That page does not exist on okano.dev.">
+  <meta name="robots" content="noindex">
+
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (err) {
+        /* Storage unavailable — fall back to the CSS defaults. */
+      }
+    })();
+  </script>
+
+  <style>
+    .error-page {
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: var(--space-lg);
+      background: var(--gradient-hero);
+    }
+
+    .error-code {
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-block-end: var(--space-sm);
+    }
+
+    .error-message {
+      margin-block: var(--space-md) var(--space-lg);
+      color: var(--text-secondary);
+      margin-inline: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="error-page">
+    <div>
+      <p class="error-code">// 404</p>
+      <h1>This page does not exist</h1>
+      <p class="error-message">The link may be old, or I may have moved something. Both are fixable.</p>
+      <div class="hero-cta" style="justify-content: center;">
+        <a href="/" class="btn btn-primary">Home</a>
+        <a href="/blog/" class="btn btn-outline">Blog</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://okano.dev/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://okano.dev/?lang=pt-BR"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://okano.dev/?lang=de"/>
+  </url>
+  <url>
+    <loc>https://okano.dev/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://okano.dev/blog/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://okano.dev/blog/de/"/>
+  </url>
+  <url>
+    <loc>https://okano.dev/blog/pt-BR/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://okano.dev/blog/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://okano.dev/blog/de/"/>
+  </url>
+  <url>
+    <loc>https://okano.dev/blog/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://okano.dev/blog/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://okano.dev/blog/de/"/>
+  </url>
+  <url>
+    <loc>https://okano.dev/blog/joining-qonto/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/blog/joining-qonto/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://okano.dev/blog/pt-BR/joining-qonto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://okano.dev/blog/de/joining-qonto/"/>
+  </url>
+  <url>
+    <loc>https://okano.dev/blog/pt-BR/joining-qonto/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/blog/joining-qonto/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://okano.dev/blog/pt-BR/joining-qonto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://okano.dev/blog/de/joining-qonto/"/>
+  </url>
+  <url>
+    <loc>https://okano.dev/blog/de/joining-qonto/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/blog/joining-qonto/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://okano.dev/blog/pt-BR/joining-qonto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://okano.dev/blog/de/joining-qonto/"/>
+  </url>
+  <url>
+    <loc>https://okano.dev/blog/how-this-blog-works/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://okano.dev/blog/how-this-blog-works/"/>
+  </url>
+</urlset>

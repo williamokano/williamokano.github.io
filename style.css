@@ -436,6 +436,8 @@
     display: none;
     align-items: center;
     gap: var(--space-md);
+    /* Keep the links clear of the logo; .nav-actions holds the right edge. */
+    margin-inline-start: var(--space-lg);
 
     & a {
       font-family: var(--font-heading);
@@ -468,7 +470,9 @@
       }
     }
 
-    @media (min-width: 48em) {
+    /* Eight nav items need more room than a tablet has — hand over to the
+       mobile menu until there is space for the full set. */
+    @media (min-width: 64em) {
       display: flex;
     }
   }
@@ -550,7 +554,7 @@
     height: 2.5rem;
     color: var(--text-primary);
 
-    @media (min-width: 48em) {
+    @media (min-width: 64em) {
       display: none;
     }
 
@@ -1176,5 +1180,268 @@
       min-height: auto;
       padding-block: var(--space-lg);
     }
+  }
+}
+
+/* ==========================================================================
+   Layers reopened — additions for the "now" chip, stats, How I Work,
+   the richer timeline, and the writing/blog surfaces.
+   ========================================================================== */
+
+@layer components {
+  /* --- Ghost button (tertiary CTA) --- */
+  .btn-ghost {
+    color: var(--text-secondary);
+
+    &:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+  }
+
+  /* --- "Now" chip: what I am doing at this moment --- */
+  .now-chip {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-sm);
+    max-width: 100%;
+    margin-block-end: var(--space-md);
+    padding: var(--space-xs) var(--space-md);
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    /* Not a pill: the chip wraps to two lines on narrow screens. */
+    border-radius: var(--radius-lg);
+    font-size: var(--text-sm);
+  }
+
+  .now-chip-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 var(--accent-muted);
+    animation: now-pulse 2.4s ease-out infinite;
+    flex-shrink: 0;
+  }
+
+  .now-chip-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+  }
+
+  .now-chip-value {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  @keyframes now-pulse {
+    0%   { box-shadow: 0 0 0 0 var(--accent-muted); }
+    70%  { box-shadow: 0 0 0 0.75rem transparent; }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+
+  /* --- Stat strip --- */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+    margin-block-start: var(--space-xl);
+    max-width: 46rem;
+
+    @media (min-width: 48em) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  .stat {
+    padding-inline-start: var(--space-sm);
+    border-inline-start: 2px solid var(--accent-muted);
+
+    & .stat-value {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--accent), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    & .stat-label {
+      margin-block-start: 0.15rem;
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      line-height: 1.4;
+      max-width: 22ch;
+    }
+  }
+}
+
+@layer sections {
+  /* --- How I Work --- */
+  /* Four principles: one column, then 2x2, then a single row — never an orphan. */
+  .approach-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+
+    @media (min-width: 40em) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 80em) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  .approach-card {
+    position: relative;
+    padding: var(--space-md);
+    overflow: hidden;
+
+    & .approach-card-index {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-block-end: var(--space-sm);
+    }
+
+    & .approach-card-title {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      font-weight: 600;
+      margin-block-end: var(--space-sm);
+      text-wrap: balance;
+    }
+
+    & .approach-card-description {
+      color: var(--text-secondary);
+      font-size: var(--text-sm);
+    }
+  }
+
+  /* --- Timeline: current role, dates, team --- */
+  .timeline-heading {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .timeline-badge {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    padding: 0.1em 0.6em;
+    border-radius: 999px;
+    background: var(--accent-muted);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    white-space: nowrap;
+  }
+
+  .timeline-team::before,
+  .timeline-dates::before {
+    content: '·';
+    margin-inline: 0.4em;
+    color: var(--text-muted);
+  }
+
+  .timeline-team {
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  .timeline-item--current {
+    & .timeline-dot {
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-muted);
+    }
+
+    & .timeline-role {
+      font-size: var(--text-xl);
+    }
+  }
+
+  @media (min-width: 48em) {
+    .timeline-item:nth-child(odd) .timeline-heading {
+      justify-content: flex-end;
+    }
+  }
+
+  /* --- Writing groups (own blog + published elsewhere) --- */
+  .writing-group + .writing-group {
+    margin-block-start: var(--space-xl);
+  }
+
+  .writing-group-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    padding-block-end: var(--space-sm);
+    margin-block-end: var(--space-md);
+    border-block-end: 1px solid var(--border);
+
+    & h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      font-weight: 600;
+    }
+  }
+
+  .writing-group-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--accent);
+    transition: gap 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-hover);
+      gap: 0.7em;
+    }
+  }
+
+  /* Post cards rendered from blog/posts.json */
+  .article-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4em;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+  }
+
+  .article-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .lang-badge {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    padding: 0.05em 0.5em;
+    border-radius: var(--radius-sm);
+    background: var(--secondary-muted);
+    color: var(--secondary);
+    white-space: nowrap;
+  }
+
+  .writing-empty {
+    color: var(--text-muted);
+    font-size: var(--text-sm);
   }
 }

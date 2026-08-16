@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Blog — William Okano</title>
+  <meta name="description" content="Notizen zu Backend-Systemen, den Teams dahinter und gelegentlichen Abstechern">
+  <meta name="author" content="William Okano">
+  <link rel="canonical" href="https://okano.dev/blog/de/">
+  <link rel="alternate" hreflang="en" href="https://okano.dev/blog/">
+  <link rel="alternate" hreflang="pt-BR" href="https://okano.dev/blog/pt-BR/">
+  <link rel="alternate" hreflang="de" href="https://okano.dev/blog/de/">
+  <link rel="alternate" hreflang="x-default" href="https://okano.dev/blog/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://okano.dev/blog/de/">
+  <meta property="og:title" content="Blog — William Okano">
+  <meta property="og:description" content="Notizen zu Backend-Systemen, den Teams dahinter und gelegentlichen Abstechern">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:image" content="https://okano.dev/og-image.png">
+  <meta property="og:site_name" content="William Okano">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog — William Okano">
+  <meta name="twitter:description" content="Notizen zu Backend-Systemen, den Teams dahinter und gelegentlichen Abstechern">
+  <meta name="twitter:image" content="https://okano.dev/og-image.png">
+
+  <link rel="alternate" type="application/rss+xml" title="William Okano — Blog (Deutsch)" href="/blog/feed.de.xml">
+
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/blog.css">
+
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (err) {
+        /* Storage unavailable — fall back to the CSS defaults. */
+      }
+    })();
+  </script>
+
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="/?lang=de" class="nav-logo" aria-label="William Okano">w<span>.</span>okano</a>
+
+      <div class="nav-links">
+        <a href="/?lang=de#about">Über mich</a>
+        <a href="/?lang=de#approach">Arbeitsweise</a>
+        <a href="/?lang=de#projects">Projekte</a>
+        <a href="/?lang=de#experience">Erfahrung</a>
+        <a href="/?lang=de#contact">Kontakt</a>
+        <a href="/blog/de/" class="active" aria-current="page">Blog</a>
+      </div>
+
+      <div class="nav-actions">
+        <div class="lang-picker" role="group" aria-label="Language selection"><a class="lang-option" href="/blog/" hreflang="en" lang="en" data-lang="en" aria-label="English" aria-current="false">EN</a><a class="lang-option" href="/blog/pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR" aria-label="Português" aria-current="false">PT</a><a class="lang-option active" href="/blog/de/" hreflang="de" lang="de" data-lang="de" aria-label="Deutsch" aria-current="true">DE</a></div>
+        <button class="theme-toggle" aria-label="Zum hellen Modus wechseln"
+                data-aria-light="Zum hellen Modus wechseln"
+                data-aria-dark="Zum dunklen Modus wechseln">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="nav-mobile" aria-label="Mobile navigation">
+        <a href="/?lang=de#about">Über mich</a>
+        <a href="/?lang=de#approach">Arbeitsweise</a>
+        <a href="/?lang=de#projects">Projekte</a>
+        <a href="/?lang=de#experience">Erfahrung</a>
+        <a href="/?lang=de#contact">Kontakt</a>
+        <a href="/blog/de/" class="active" aria-current="page">Blog</a>
+        <div class="lang-picker" role="group" aria-label="Language selection"><a class="lang-option" href="/blog/" hreflang="en" lang="en" data-lang="en" aria-label="English" aria-current="false">EN</a><a class="lang-option" href="/blog/pt-BR/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR" aria-label="Português" aria-current="false">PT</a><a class="lang-option active" href="/blog/de/" hreflang="de" lang="de" data-lang="de" aria-label="Deutsch" aria-current="true">DE</a></div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="blog-page">
+    <div class="container">
+      <div class="blog-hero">
+        <p class="blog-eyebrow"><a href="/?lang=de">Zurück zu okano.dev</a></p>
+        <h1>Blog</h1>
+        <p class="blog-lede">Notizen zu Backend-Systemen, den Teams dahinter und gelegentlichen Abstechern</p>
+        <a class="feed-link" href="/blog/feed.de.xml">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+          <span>RSS</span>
+        </a>
+      </div>
+
+      <div class="post-list">
+        <article class="post-list-item glass-card" lang="de">
+          <p class="article-card-meta">
+            <time datetime="2026-08-16">16. August 2026</time>
+            <span aria-hidden="true">·</span>
+            <span>2 Min. Lesezeit</span>
+            
+          </p>
+          <h2 class="post-list-title"><a href="/blog/de/joining-qonto/">Ein neues Kapitel: Start bei Qonto</a></h2>
+          <p class="post-list-summary">Nach meiner Zeit bei Grammarly starte ich bei Qonto im Team Wealth &amp; Market als Staff Software Engineer und arbeite am Investment-Teil des Produkts.</p>
+          <div class="article-card-tags"><span class="tag">karriere</span><span class="tag">fintech</span></div>
+          <a class="article-card-link" href="/blog/de/joining-qonto/">
+            <span>Beitrag lesen</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+        <article class="post-list-item glass-card" lang="en">
+          <p class="article-card-meta">
+            <time datetime="2026-08-15">15. August 2026</time>
+            <span aria-hidden="true">·</span>
+            <span>2 Min. Lesezeit</span>
+            <span class="lang-badge">EN</span>
+          </p>
+          <h2 class="post-list-title"><a href="/blog/how-this-blog-works/">How this blog works</a></h2>
+          <p class="post-list-summary">A colophon. Markdown in, static HTML out, one URL per language, and a CI job that refuses to let the generated output drift from the source.</p>
+          <div class="article-card-tags"><span class="tag">meta</span><span class="tag">static-site</span><span class="tag">tooling</span></div>
+          <a class="article-card-link" href="/blog/how-this-blog-works/">
+            <span>Beitrag lesen</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-tagline">println(&quot;Lass uns etwas bauen, das es wert ist, gepflegt zu werden.&quot;)</p>
+      <div class="footer-links">
+        <a href="/?lang=de">okano.dev</a>
+        <a href="/blog/de/">Blog</a>
+        <a href="/blog/feed.de.xml">RSS</a>
+        <a href="https://github.com/williamokano" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/williamokano" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+  <script src="/blog.js" defer></script>
+</body>
+</html>
