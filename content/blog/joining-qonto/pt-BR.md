@@ -1,11 +1,11 @@
 ---
 title: Novo capítulo: entrando na Qonto
-summary: Depois de um período na Grammarly, entro no time Wealth & Market da Qonto como Staff Software Engineer, trabalhando na parte de investimentos do produto.
+summary: Depois de um período na Grammarly, entrei no time Wealth & Market da Qonto como Staff Software Engineer, trabalhando na parte de investimentos do produto.
 date: 2026-08-16
 tags: [carreira, fintech]
 ---
 
-Meu último dia na Grammarly foi 30 de junho de 2026. No dia 20 de agosto começo na [Qonto](https://qonto.com) como Staff Software Engineer no time **Wealth & Market** — o time por trás da parte de investimentos do produto.
+Meu último dia na Grammarly foi 30 de junho de 2026. No dia 20 de julho comecei na [Qonto](https://qonto.com) como Staff Software Engineer no time **Wealth & Market** — o time por trás da parte de investimentos do produto. Dezenove dias entre um e outro, exatamente o tempo de folga que eu precisava para parar de pensar na base de código anterior.
 
 ## Por que isso, e por que agora
 

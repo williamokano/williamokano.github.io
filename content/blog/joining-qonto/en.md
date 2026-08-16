@@ -1,11 +1,11 @@
 ---
 title: A new chapter: joining Qonto
-summary: After a run at Grammarly, I am joining Qonto's Wealth & Market team as a Staff Software Engineer, working on the investment side of the product.
+summary: After a run at Grammarly, I have joined Qonto's Wealth & Market team as a Staff Software Engineer, working on the investment side of the product.
 date: 2026-08-16
 tags: [career, fintech]
 ---
 
-My last day at Grammarly was 30 June 2026. On 20 August I start at [Qonto](https://qonto.com) as a Staff Software Engineer on **Wealth & Market** — the team behind the investment side of the product.
+My last day at Grammarly was 30 June 2026. On 20 July I started at [Qonto](https://qonto.com) as a Staff Software Engineer on **Wealth & Market** — the team behind the investment side of the product. Nineteen days between the two, which was exactly as much time off as I needed to stop thinking about the last codebase.
 
 ## Why this, and why now
 
