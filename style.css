@@ -711,10 +711,19 @@
   }
 
   /* --- Skills --- */
+  /* Four cards: one column, then 2x2, then a single row — never a lone orphan. */
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    grid-template-columns: 1fr;
     gap: var(--space-md);
+
+    @media (min-width: 40em) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 80em) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
 
   .skill-card {

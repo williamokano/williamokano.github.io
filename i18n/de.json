@@ -40,7 +40,6 @@
     "languages": "Programmiersprachen",
     "backend": "Backend & Systeme",
     "infra": "Infrastruktur & DevOps",
-    "web3": "Web3 & Blockchain",
     "tooling": "Tooling & Umgebung"
   },
   "projects": {
@@ -128,13 +127,10 @@
     "back_home": "Zurück zu okano.dev",
     "read_post": "Beitrag lesen",
     "reading_time": "{min} Min. Lesezeit",
-    "tags": "Tags",
     "empty": "Noch keine Beiträge. Der erste ist unterwegs.",
     "rss": "RSS",
     "translations": "Auch verfügbar auf",
     "only_in_this_language": "Dieser Beitrag ist nur auf Deutsch verfügbar.",
-    "not_translated_badge": "nur DE",
-    "language_note": "Geschrieben auf",
     "newer": "Neuer",
     "older": "Älter"
   },
@@ -184,9 +180,7 @@
     "chaos_engineering": "Chaos Engineering",
     "cloud": "Cloud",
     "solidity": "Solidity",
-    "smart_contracts": "Smart Contracts",
     "ethereum": "Ethereum",
-    "ethersjs": "ethers.js",
     "git": "Git",
     "neovim": "Neovim",
     "linux": "Linux",
